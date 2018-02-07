@@ -10,8 +10,8 @@
   <li>Home</li>
   <li>About</li>
   <li>Contact</li>
+  <li ><a href="file:///C:/Users/JC/AppData/Local/Temp/Rar$EX43.280/Weather-App-master/forecast.html">Weather</a></li>
  </div>
- 
  <div class="login">
      <p align="center">Login </p>
      <input type="text" placeholder="Enter username"><br><br>

@@ -30,16 +30,18 @@ color:white;
   display:inline-block;
   position:fixed;
   top:0;
-  margin-left:1100px;
+  margin-left:1000px;
 }
-.header ul li {
+.header ul li, ul li a {
   color:white;
   list-style:none;
   display:inline-block;
   margin-top:15px;
   padding-right:10px;
-  font-family:verdana;
+  font-family:verdana; 
+  text-decoration:none;
 }
+
 .login
 {
 	margin:200 auto;
@@ -90,7 +92,7 @@ color:white;
 .login input[type=submit]:hover{
 	color:white;
 	background-color:#1eaa83;
-	
+
 }
 .SignUp
 {

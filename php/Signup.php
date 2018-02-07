@@ -10,6 +10,7 @@
   <li>Home</li>
   <li>About</li>
   <li>Contact</li>
+  <li ><a href="file:///C:/Users/JC/AppData/Local/Temp/Rar$EX43.280/Weather-App-master/forecast.html">Weather</a></li>
  </div>
  <div class="Signup">
      <table cellspacing="5px" cellpadding="5px" align="center">
