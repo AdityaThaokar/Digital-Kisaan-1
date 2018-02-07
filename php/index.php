@@ -125,6 +125,6 @@ of your home - no more standing in the long queues at ration shops, provision st
 </div>
 
 <div class="about">
-
+<p>Dekhte hai hota hai kya</p>
 </div>
 </html>
