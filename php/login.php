@@ -11,7 +11,7 @@
   <li>About</li>
   <li>Contact</li>
  </div>
- </div>
+ 
  <div class="login">
      <p align="center">Login </p>
      <input type="text" placeholder="Enter username"><br><br>
