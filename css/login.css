@@ -44,14 +44,16 @@ color:white;
 
 .login
 {
-	margin:200 auto;
+
 	width:300px;
 	background-color:white;
 	padding:20px;
 	display:inline-block;
 	border-radius:5px;
 	background-color:rgba(255,255,255,0.5);
-	display:block;
+	display:inline-block;
+	float:left;
+	
 	
 }
 .login p
@@ -94,9 +96,36 @@ color:white;
 	background-color:#1eaa83;
 
 }
+.flexcontainer {
+   display: flex;
+   flex-direction: row;
+   margin-left:10px;
+   margin-top:200px;
+   justify-content: space-around;
+}
+/*On the flex container*/
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+}
+.flexcontainerSignup {
+   display: flex;
+   flex-direction: row;
+   margin-left:5px;
+   margin-top:150px;
+   justify-content: space-around;
+}
+.lexcontainerSignup {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+}
 .SignUp
 {
-	margin:150 auto;
+	margin-top:10px;
 	width:640px;
 	background-color:rgba(255,255,255,0.5);
 	padding:10px;
@@ -159,4 +188,57 @@ color:white;
 	font-family: sans-serif;
 	font-size:15px;
 	color:white;
+}
+.seller
+{
+
+	width:300px;
+	background-color:white;
+	padding-left:30px;
+	padding:20px;
+	display:inline-block;
+	border-radius:5px;
+	background-color:rgba(255,255,255,0.5);
+	
+	
+}
+.seller p
+{
+	font-family: sans-serif;
+	font-size:20px;
+	color:white;
+} 
+
+.seller input[type=text]
+{
+	width:300px;
+	padding:10px;
+	font-size:15px;
+	border-radius:5px;
+	border:none;
+}
+.seller input[type=password]
+{
+	width:300px;
+	padding:10px;
+	font-size:15px;
+	border-radius:5px;
+	border:none;	
+}
+.seller input[type=submit]
+{
+	width:80px;
+	padding:10px;
+	font-size:15px;
+	border-radius:5px;
+	border:none;
+	font-family: sans-serif;
+	text-align: center;
+	margin:auto;
+    display:block;
+}
+.seller input[type=submit]:hover{
+	color:white;
+	background-color:#1eaa83;
+
 }

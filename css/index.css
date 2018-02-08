@@ -41,6 +41,11 @@ color:white;
   font-family:verdana; 
   text-decoration:none;
 }
+.header h6{
+
+	padding-top:10px;
+	margin-left:10px;
+}
 .header button{
   color:white;
   background:none;
@@ -66,7 +71,7 @@ color:white;
 	height:300px;
 }
 .start h2{
-	margin-top:150px;
+	margin-top:250px;
 	margin-left:200;
 	margin-right:200;
 	font-size:40px;color:white;

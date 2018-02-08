@@ -83,14 +83,15 @@ $(document).ready(function (){
 </script>
 </head>
 <body> 
- <div class="header"><div id="google_translate_element" style="color: white;margin-left: 10px;">Translate the page</div>
+ <div class="header"  id="google_translate_element" style="color: white;">
  <p>Digital Kisaan</p>
- <ul>
+ <h6>Translate</h6>
+ <ul> 
   <li>Home</li>
   <li>About</li>
    <li><button type="button" onclick="smoothScroll(document.getElementById('contact'))">Contact</button></li>
   <li ><a href="current.html">Weather</a></li>
- </div>
+ </div> 
 <div class="Start">
 <h2>WELCOME</h2>
 <p>" We, at DigitalKisaan.com, are excited about making life simpler and grocery shopping a 

@@ -10,15 +10,25 @@
   <li>Home</li>
   <li>About</li>
   <li>Contact</li>
-  <li ><a href="file:///C:/Users/JC/AppData/Local/Temp/Rar$EX43.280/Weather-App-master/forecast.html">Weather</a></li>
+  <li ><a href="current.html">Weather</a></li>
  </div>
+ <div class="flexcontainer">
  <div class="login">
-     <p align="center">Login </p>
+     <p align="center">Farmer Login </p>
      <input type="text" placeholder="Enter username"><br><br>
 	 <input type="password" placeholder="Enter password"><br><br>
      <input  type="submit" value="Login">
    <div class="footr">
-     <p>New user ? Click <a href="./Signup.php">here</a> to create an account</p>    
-   </div>	 
+     <p>New user ? Click <a href="./Signup.php">here</a> to create an account</p>  
+	 </div>	</div>
+<div class="seller">
+     <p align="center">Wholeseller Login</p>
+     <input type="text" placeholder="Enter username"><br><br>
+	 <input type="password" placeholder="Enter password"><br><br>
+     <input  type="submit" value="Login">
+   <div class="footr">
+     <p style="font-size:15px;">New user ? Click <a href="./Signup.php">here</a> to create an account</p>    
+   </div>	 	 
+  </div>  
  </div>
 </html>
