@@ -7,14 +7,14 @@
  <div class="header">
  <p>Digital Kisaan</p>
  <ul>
-  <li><a href="../php/index.php">Home</a></li>
+  <li>Home</li>
   <li>About</li>
   <li>Contact</li>
-  <li><a href="../php/forecast.html">Weather</a></li>
+  <li ><a href="file:///C:/Users/JC/AppData/Local/Temp/Rar$EX43.280/Weather-App-master/forecast.html">Weather</a></li>
  </div>
  <div class="Signup">
-<table cellspacing="5px" cellpadding="5px" align="center">
-<tr>
+     <table cellspacing="5px" cellpadding="5px" align="center">
+<tr >
 <td colspan="2">
 <p align="center">SignUp</p>
 </td>

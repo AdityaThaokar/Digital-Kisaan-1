@@ -27,7 +27,7 @@ color:white;
 	margin-top:3px;
 }
 .header ul {
-  display:inline;
+  display:inline-block;
   position:fixed;
   top:0;
   margin-left:1000px;
