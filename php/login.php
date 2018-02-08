@@ -1,16 +1,18 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../css/login.css">
+
+
 <title>Login</title>
 </head>
 <body> 
 <div class="header">
  <p>Digital Kisaan<p>
  <ul>
-  <li>Home</li>
+  <li><a href="../php/index.php">Home</a></li>
   <li>About</li>
   <li>Contact</li>
-  <li ><a href="file:///C:/Users/JC/AppData/Local/Temp/Rar$EX43.280/Weather-App-master/forecast.html">Weather</a></li>
+  <li><a href="../php/forecast.html">Weather</a></li>
  </div>
  <div class="login">
      <p align="center">Login </p>
