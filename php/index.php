@@ -1,6 +1,6 @@
 <html>
 <head>
-
+<link rel="stylesheet" type="text/css" href="../css/login.css">
 <link rel="stylesheet" type="text/css" href="../css/index.css">
 <title>Lets Start</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -10,28 +10,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.2/flexslider.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.2/jquery.flexslider.js"></script>
 <script language="JavaScript">
-window.smoothScroll = function(target) {
-    var scrollContainer = target;
-    do { //find scroll container
-        scrollContainer = scrollContainer.parentNode;
-        if (!scrollContainer) return;
-        scrollContainer.scrollTop += 1;
-    } while (scrollContainer.scrollTop == 0);
-
-    var targetY = 0;
-    do { //find the top of target relatively to the container
-        if (target == scrollContainer) break;
-        targetY += target.offsetTop;
-    } while (target = target.offsetParent);
-
-    scroll = function(c, a, b, i) {
-        i++; if (i > 30) return;
-        c.scrollTop = a + (b - a) / 30 * i;
-        setTimeout(function(){ scroll(c, a, b, i); }, 20);
-    }
-    // start scrolling
-    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-}
 $(document).ready(function (){
   if (jQuery().flexslider) {
   //flexslider ticker
@@ -77,17 +55,13 @@ $(document).ready(function (){
 </script>
 </head>
 <body> 
-<div class="header">
- <p>Digital Kisaan<p>
+ <div class="header">
+ <p>Digital Kisaan</p>
  <ul>
+  <li>Home</li>
   <li>About</li>
-<<<<<<< HEAD
-  <li><button type="button" onclick="smoothScroll(document.getElementById('contact'))">Contact</button></li>
-  <li><a href="../php/forecast.html">Weather</a></li>
-=======
   <li>Contact</li>
   <li ><a href="current.html">Weather</a></li>
->>>>>>> upstream/master
  </div>
 <div class="Start">
 <h2>WELCOME</h2>
@@ -151,12 +125,7 @@ of your home - no more standing in the long queues at ration shops, provision st
    </div>
 </div>
 
-<div class="Contact" id="contact">
-<p>
-<img src="../images/toll.png" width="30px">Toll Free 1800-274-3131
-<img src="../images/email.png" width="30px">DigitalKisaan@service.com
-<img src="../images/franchize.png" width="30px">Franchise
-<br></p>
-<h4>Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
+<div class="about">
+
 </div>
 </html>
