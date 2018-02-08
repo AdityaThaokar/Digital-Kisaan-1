@@ -2,20 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<<<<<<< HEAD
-    <title>Weather App</title>
+    <title>Weather App - Forecast</title>
     
     <!-- Latest compiled and minified CSS -->
-=======
-    <title>Weather Forecast</title>
->>>>>>> upstream/master
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
-<<<<<<< HEAD
 <nav class="navbar navbar-default" id="nav_bar">
    <div class="container">
        <div class="navbar-header">
@@ -44,34 +39,52 @@
 </nav> 
 
 <div class="jumbotron" style="margin-bottom:0px; background-color:#4aa1f3; color:white;">
-=======
-<div class="jumbotron" style="margin-bottom:0px; background-color:#1eaa83; color:white;">
->>>>>>> upstream/master
-    <h2 class="text-center" style="font-size:40px; font-weight:600;">Get Current Weather Information</h2>
+    <h2 class="text-center" style="font-size:40px; font-weight:600;">Get Weather Forecast</h2>
 </div>
 
-<div class="container" style="height:650px;">
+<div class="container" style="height:1350px;">
     <div class="row" >
         <div class="col-md-12" style="margin-bottom:10px;">
-<<<<<<< HEAD
             <h3 class="text-center text-primary">Enter City Name</h3>
-=======
-            <h3 class="text-center text-primary" style="color:#0a7f5e;">Enter City Name</h3>
->>>>>>> upstream/master
             <span id="error" class="text-center"></span>
         </div>
         
         <div class="row form-group form-inline" id="cityDiv">
            
             <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name" >
-<<<<<<< HEAD
-            <button id="submitCity" class="btn btn-primary">Search City</button>
+            <input type="text" name="days" id="days" class="form-control" placeholder="Number: Min - 1 & Max - 16" >
+            <button id="submitForecast" class="btn btn-primary">Search City</button>
         </div>
 
     </div>
     
+    <div class="row" style="margin-top:30px">
+        <table class="table table-bordered">
+           <div id="header"  class="text-center"></div>
+           
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th>Weather</th>
+                    <th>Description</th>
+                    <th>Morning Temperature</th>
+                    <th>Night Temperature</th>
+                    <th>Min. Temperature</th>
+                    <th>Max. Temperature</th>
+                    <th>Pressure</th>
+                    <th>Humidity</th>
+                    <th>Wind Speed</th>
+                    <th>Wind Direction</th>
+                </tr>
+            </thead>
+            
+            <tbody id="forecastWeather">
+                
+            </tbody>
+            
+        </table>
+    </div>
     
-    <div id="showWeather"></div>
 </div>
 
 <div class="footer">
@@ -91,26 +104,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
      
-=======
-            <button id="submitCity" class="btn btn-primary" style="background-color:#1eaa83;border-color:#1eaa83;">Search City</button>
-        </div>
-
-    </div>
-    <div id="showWeather"></div>
-</div>
-
-<div class="footer" style="background-color:#1eaa83;">
-    <div class="container">
-        <div class="row text-center" style="padding-top:30px;background-color:#1eaa83;">
-            <p style="color:white; background-color:#1eaa83;">Digital Kisan</p>
-        </div>
-    </div>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>        
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
->>>>>>> upstream/master
-<script src="weather.js"></script>   
+<script src="forecast.js"></script>   
       
 </body>
 </html>
