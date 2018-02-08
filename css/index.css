@@ -14,7 +14,7 @@ color:white;
 	background-color:#1eaa83;
     height:80px;
 	width:100%;
-	position:fixed;
+	position:relative;
 	top:0;
 	}
 .header p{
@@ -24,11 +24,11 @@ color:white;
 	color:white;
 	padding-bottom:2px;
 	margin-left:20px;
-	margin-top:3px;
+	margin-top:0px;
 }
 .header ul {
   display:inline;
-  position:fixed;
+  position:absolute;
   top:0;
   margin-left:1000px;
 }
@@ -43,13 +43,14 @@ color:white;
 }
 .header h6{
 
-	padding-top:10px;
-	margin-left:10px;
+	top:0;
+	margin-left:10px;font-size:15px;
 }
 .header button{
   color:white;
   background:none;
   border:none;
+  font-size:15px;
   list-style:none;
   display:inline-block;
   margin-top:15px;
@@ -64,11 +65,11 @@ color:white;
   margin-top:15px;
   padding-right:10px;
   font-family:verdana; 
-  text-decoration:none;
+  text-decoration:none;font-size:15px;
 }
 .start{
 	width:100%;
-	height:300px;
+	height:450px;
 }
 .start h2{
 	margin-top:250px;
@@ -213,12 +214,12 @@ color:white;
 }
 .Contact{
 	background-color:#1eaa83;
-	height:auto;
-	margin-top:100px;
+	height:170px;
+	margin-top:200px;
 }
-.Contact img,p {
+.Contact img {
 	color:white;
-	margin-left:200px;
+	margin-left:190px;
 	padding-top:20px;
 	padding-bottom:20px;
 	padding-right:5px;
@@ -227,8 +228,7 @@ color:white;
 }
 .Contact h4{
 	color:white;
-	vertical-align:center;
-	margin-left:500px;
+	margin-left:470;
 	padding-top:20px;
 	padding-bottom:10px;
 	padding-right:5px;

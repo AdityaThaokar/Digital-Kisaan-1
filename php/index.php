@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="../css/index.css">
 <title>Lets Start</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 <script type="text/javascript">
@@ -84,7 +84,7 @@ $(document).ready(function (){
 </head>
 <body> 
  <div class="header"  id="google_translate_element" style="color: white;">
- <p>Digital Kisaan</p>
+ <p><img src="../images/kisaanlogo.png" width="40px">Digital Kisaan</p>
  <h6>Translate</h6>
  <ul> 
   <li>Home</li>
