@@ -82,7 +82,7 @@ $(document).ready(function (){
  <ul>
   <li>Home</li>
   <li>About</li>
-  <li>Contact</li>
+   <li><button type="button" onclick="smoothScroll(document.getElementById('contact'))">Contact</button></li>
   <li ><a href="current.html">Weather</a></li>
  </div>
 <div class="Start">

@@ -1,5 +1,5 @@
 body{
-    font-family: 'Tangerine', serif;
+  
     background-color: #ffffff;
     font-size: 20px;
     margin: 0;
@@ -17,11 +17,12 @@ body{
     color: #4aa1f3 !important;
     font-size: 25px;
     font-weight: 600;
+    font-family:verdana; 
 }
 
 #nav_list > li > a{
     color: #4aa1f3 !important;
-    font-weight: 500;
+    font-weight: 500;  font-family:sans-serif; 
 }
 
 #logo{
@@ -43,7 +44,7 @@ body{
 #colHeadText1{
     color: white;
     padding-top: 30px;
-    font-size: 45px;
+    font-size: 45px;  font-family:sans-serif; 
 }
 
 #colHeadText2{
@@ -56,7 +57,7 @@ body{
 ul#list_item{
     color: white;
     font-size: 35px;
-    text-align: center;
+    text-align: center;  font-family:sans-serif; 
 }
 
 #cityDiv{
@@ -72,7 +73,7 @@ input[type='text']{
 
 #submitCity{
     height: 40px;
-    font-weight: bold;
+    font-weight: bold;  font-family:sans-serif; 
 }
 
 #errorCity{
@@ -99,7 +100,7 @@ input[type='text']{
 
 table{
     color: #333333;
-    font-family: Helvetical, Arial, sans-serif;
+    font-family: sans-serif;
 }
 
 th{
