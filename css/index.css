@@ -191,6 +191,10 @@ color:white;
   color:#475055;
   margin-bottom: -1px;
 }
+
+.header ul li a:hover{
+  color:#fff;
+}
 .slider-right ul li a:hover {
   background:#1489b5;
   text-decoration:none;

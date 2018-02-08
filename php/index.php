@@ -81,8 +81,13 @@ $(document).ready(function (){
  <p>Digital Kisaan<p>
  <ul>
   <li>About</li>
+<<<<<<< HEAD
   <li><button type="button" onclick="smoothScroll(document.getElementById('contact'))">Contact</button></li>
   <li><a href="../php/forecast.html">Weather</a></li>
+=======
+  <li>Contact</li>
+  <li ><a href="current.html">Weather</a></li>
+>>>>>>> upstream/master
  </div>
 <div class="Start">
 <h2>WELCOME</h2>
