@@ -2,6 +2,19 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 <title>Signup</title>
+<script type="text/javascript">
+  function initAutocomplete() {
+    autocomplete = new google.maps.places.Autocomplete(
+     (document.getElementById('location')),
+        {types: ['geocode']});
+    autocomplete.addListener('place_changed', fillInAddress);
+  }
+
+  function fillInAddress() {
+    var place = autocomplete.getPlace();
+
+  }
+ </script>
 </head>
 <body> 
  <div class="header">
@@ -48,7 +61,7 @@
 <input type="email" placeholder="Enter your email*">
 </td>
 <td>
-<input type="text" placeholder="City/District*">
+<input type="text" id="location" placeholder="City/District*">
 </td>
 
 <tr>
@@ -65,4 +78,6 @@
      <p>Already have account ? Click <a href="./login.php">here</a> to login</p>    
   </div>
  </div>
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeMQgP036S3bA1yPmzGABcVN-COuYIHLc&libraries=places&callback=initAutocomplete" async defer></script>
+</body>
 </html>
