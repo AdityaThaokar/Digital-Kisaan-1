@@ -12,8 +12,8 @@
  <p><img src="../images/kisaanlogo.png" width="40px">Digital Kisaan<p>
  <ul>
   <li>Home</li>
-  <li>About</li>
-  <li>Contact</li>
+  <li><a href="About.php">About</a></li>
+  <li><a href="contact.php">Contact</a></li>
   <li ><a href="current.html">Weather</a></li>
  </div>
  <div class="flexcontainer">

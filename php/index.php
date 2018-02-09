@@ -80,7 +80,7 @@ $(document).ready(function (){
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
  <ul> 
   <li>Home</li>
-  <li>About</li>
+  <li><a href="About.php">About</a></li>
    <li><button type="button" onclick="smoothScroll(document.getElementById('contact'))">Contact</button></li>
   <li ><a href="current.html">Weather</a></li>
  </div> 

@@ -17,12 +17,15 @@
  </script>
 </head>
 <body> 
+<?php
+ include('translate.php');
+?> 
  <div class="header">
  <p>Digital Kisaan</p>
  <ul>
   <li>Home</li>
-  <li>About</li>
-  <li>Contact</li>
+  <li><a href="About.php">About</a></li>
+  <li><a href="contact.php">Contact</a></li>
   <li ><a href="file:///C:/Users/JC/AppData/Local/Temp/Rar$EX43.280/Weather-App-master/forecast.html">Weather</a></li>
  </div>
  <div class="Signup" style="margin-left: 25%;margin-top: 5%;">
