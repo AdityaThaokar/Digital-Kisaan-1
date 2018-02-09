@@ -4,15 +4,8 @@
 <link rel="stylesheet" type="text/css" href="../css/index.css">
 <title>Lets Start</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: "en"}, "google_translate_element");
-}
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.2/flexslider.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.2/jquery.flexslider.js"></script>
 <script language="JavaScript">
@@ -82,10 +75,9 @@ $(document).ready(function (){
 }})
 </script>
 </head>
-<body> 
- <div class="header"  id="google_translate_element" style="color: white;">
- <p><img src="../images/kisaanlogo.png" width="40px">Digital Kisaan</p>
- <h6>Translate</h6>
+<body> <?php include('translate.php'); ?>
+ <div class="header" style="color: white;">
+ <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
  <ul> 
   <li>Home</li>
   <li>About</li>

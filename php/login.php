@@ -4,7 +4,10 @@
 
 <title>Login</title>
 </head>
-<body> 
+<body>
+<?php
+ include('translate.php');
+?> 
 <div class="header">
  <p><img src="../images/kisaanlogo.png" width="40px">Digital Kisaan<p>
  <ul>
@@ -20,15 +23,15 @@
 	 <input type="password" placeholder="Enter password"><br><br>
      <input  type="submit" value="Login">
    <div class="footr">
-     <p>New user ? Click <a href="./Signup.php">here</a> to create an account</p>  
+     <p>New user ? Click <a href="./FarmerSignup.php">here</a> to create an account</p>  
 	 </div>	</div>
 <div class="seller">
-     <p align="center">Wholeseller Login</p>
+     <p align="center">Wholesaler Login</p>
      <input type="text" placeholder="Enter username"><br><br>
 	 <input type="password" placeholder="Enter password"><br><br>
      <input  type="submit" value="Login">
    <div class="footr">
-     <p style="font-size:15px;">New user ? Click <a href="./Signup.php">here</a> to create an account</p>    
+     <p style="font-size:15px;">New user ? Click <a href="./SellerSignup.php">here</a> to create an account</p>    
    </div>	 	 
   </div>  
  </div>
