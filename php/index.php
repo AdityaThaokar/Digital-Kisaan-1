@@ -2,6 +2,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 <link rel="stylesheet" type="text/css" href="../css/index.css">
+<link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
 <title>Lets Start</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -79,7 +80,7 @@ $(document).ready(function (){
  <div class="header" style="color: white;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
  <ul> 
-  <li>Home</li>
+   <li><a href="index.php">Home</a></li>
   <li><a href="About.php">About</a></li>
    <li><button type="button" onclick="smoothScroll(document.getElementById('contact'))">Contact</button></li>
   <li ><a href="current.html">Weather</a></li>
@@ -145,7 +146,6 @@ of your home - no more standing in the long queues at ration shops, provision st
       </div>
    </div>
 </div>
-
 <div class="Contact" id="contact">
 <p>
 <img src="../images/toll.png" width="30px">Toll Free 1800-274-3131

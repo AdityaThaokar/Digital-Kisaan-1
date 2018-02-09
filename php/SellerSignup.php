@@ -1,6 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../css/login.css">
+<link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
 <title>Signup</title>
 <script type="text/javascript">
   function initAutocomplete() {
@@ -21,12 +22,12 @@
  include('translate.php');
 ?> 
  <div class="header">
- <p>Digital Kisaan</p>
+ <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
  <ul>
-  <li>Home</li>
+  <li><a href="index.php">Home</a></li>
   <li><a href="About.php">About</a></li>
   <li><a href="contact.php">Contact</a></li>
-  <li ><a href="file:///C:/Users/JC/AppData/Local/Temp/Rar$EX43.280/Weather-App-master/forecast.html">Weather</a></li>
+  <li ><a href="current.html">Weather</a></li>
  </div>
  <div class="Signup" style="margin-left: 25%;margin-top: 5%;">
      <table cellspacing="5px" cellpadding="5px" align="center">
@@ -76,7 +77,7 @@
 </table>
 
      <input  type="submit" value="SignUp">
-     <div id="terms"><br>By signing up, you agree to the <a href="#">Terms</a> of Service and <a href="#">Privacy Policy.</a></div>  
+     <div id="terms"><br>By signing up, you agree to the <a href="terms.php">Terms</a> of Service and <a href="privacy.php">Privacy Policy.</a></div>  
    <div class="footr">
      <p>Already have account ? Click <a href="./login.php">here</a> to login</p>    
   </div>

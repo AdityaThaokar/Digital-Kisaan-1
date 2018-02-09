@@ -5,7 +5,7 @@
 </head>
 <body> 
 <div class="header">
- <p>Digital Kisaan<p>
+ <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
  <ul>
   <li>Home</li>
   <li><a href="About.php">About</a></li>

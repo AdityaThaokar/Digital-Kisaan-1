@@ -2,6 +2,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 <link rel="stylesheet" type="text/css" href="../css/about.css">
+<link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
 <title>About</title>
 </head>
 <body> 
@@ -11,7 +12,7 @@
 <div class="header">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
  <ul>
-  <li>Home</li>
+  <li><a href="index.php">Home</a></li>
   <li><a href="About.php">About</a></li>
   <li><a href="contact.php">Contact</a></li>
   <li ><a href="current.html">Weather</a></li>
