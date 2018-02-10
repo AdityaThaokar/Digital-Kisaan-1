@@ -110,7 +110,7 @@ $('.flexslider').each(function() {
 		</div>
 		</div></li>
 		 <marquee behavior=scroll direction="left" scrollamount="2"style="position:relative">Flat 10% on purchase more than 5500 Rs.
-Buy Any product, If your cart value is more than 5500 Rs ,
+Buy Any products, If your cart value is more than 5500 Rs ,
 you can avail a discount of 10% on your cart value.</marquee>
 		 <li ><a href="#" style="margin-left:50px;">Mycart</a></li>
 		 <li ><a href="#" >Account</a></li>
