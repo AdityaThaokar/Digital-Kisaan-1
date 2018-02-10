@@ -7,10 +7,11 @@ include ('translate.php');
 		<title> Add Item
 		</title>
 		<link type="text/css" rel="stylesheet" href="css/auction.css">
+        <script type="text/javascript" src="autocomplete.js"></script>
 	</head>
 	<body>
 	<h2 align="center">Details Of Item to be sold</h2>
-	<form id="form1" action="uploadaction.php" method="post" enctype="multipart/form-data" >
+	<form id="form" action="uploadaction.php" method="post" enctype="multipart/form-data" >
 		 <div><table align="center">
                         <tr>
                             <td align="right"><label for="cname">Input Name</label></td><td>:</td>
@@ -81,16 +82,8 @@ include ('translate.php');
                         	</select></td>
                         </tr>
                         <tr>
-                            <td align="right"><label for="state">State</label></td><td>:</td>
-                        	<td><select id="state" name="state">
-                        	<option value="Maharashtra">Maharashtra</option>
-                        	<option value="Tamil Nadu">Tamil Nadu</option>
-                        	</select></td>
-                        </tr>
-                        <tr>
                                 <td align="right"><label for="address">Address</label></td><td>:</td>
-                                <td><textarea id="address" name="address" rows="3" cols="50">
-                                </textarea></td>
+                                <td><input type="text" id="location" name="location"></td>
                             </tr>
                         <tr>
                             <td align="right"><label for="payoptions">Payment Options</label></td><td>:</td>
@@ -109,5 +102,7 @@ include ('translate.php');
                 </div>   <br><br>
                 <center><input type="submit" value="Submit" name="submit" id="submit" ></center>
         </form>
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeMQgP036S3bA1yPmzGABcVN-COuYIHLc&libraries=places&callback=initAutocomplete" async defer></script>
 	</body>
+
 </html>

@@ -6,19 +6,7 @@ include('server.php');
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 <link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
 <title>Signup</title>
-<script type="text/javascript">
-  function initAutocomplete() {
-    autocomplete = new google.maps.places.Autocomplete(
-     (document.getElementById('location')),
-        {types: ['geocode']});
-    autocomplete.addListener('place_changed', fillInAddress);
-  }
-
-  function fillInAddress() {
-    var place = autocomplete.getPlace();
-
-  }
- </script>
+<script type="text/javascript" src="autocomplete.js"></script>
 </head>
 <body> <?php include('translate.php'); ?>
  <div class="header">
