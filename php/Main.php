@@ -1,3 +1,15 @@
+<?php 
+include('translate.php');
+include('server.php');
+if(isset($_SESSION['email'])){
+	$username = $_SESSION['username'];
+	$location = $_SESSION['location'];
+}
+else {
+    header('Location: login.php');
+   die();
+}
+?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../css/login.css">
@@ -51,7 +63,7 @@ $('.flexslider').each(function() {
  <input type="submit" value="Search">
  </p>
  <ul> 
-   <li><a href="login.php">Log In</a></li>
+   <li><a href="logout.php">Log Out</a></li>
    <li><a href="index.php">Home</a></li>
   <li><a href="About.php">About</a></li>
    <li><a href="contact.php">Contact</button></li>
@@ -109,7 +121,7 @@ $('.flexslider').each(function() {
 		<a href="">Organic Stimulant</a>
 		</div>
 		</div></li>
-		 <marquee behavior=scroll direction="left" scrollamount="2"style="position:relative">Flat 10% on purchase more than 5500 Rs.
+		 <marquee behavior=scroll direction="left" scrollamount="2" style="position:relative">Flat 10% on purchase more than 5500 Rs.
 Buy Any products, If your cart value is more than 5500 Rs ,
 you can avail a discount of 10% on your cart value.</marquee>
 		 <li ><a href="#" style="margin-left:50px;">Mycart</a></li>
