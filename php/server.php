@@ -79,32 +79,46 @@
 	}
 
 
+	// farmer login
+	if (isset($_POST['login'])) {
 
-
-
-
-
-	//login user
-	/*if (isset($_POST['login'])) {
-
-		$email = mysqli_real_escape_string($db, $_POST['email']);
-		$password = mysqli_real_escape_string($db, $_POST['passwrd']);
+		$email = $_POST['email'];
+		$password = $_POST['password'];
 
 		if (empty($email)) { array_push($errors, "Email ID is required."); }
-		if (empty($password)) { array_push($errors, "Password is required."); }
+	    if (empty($password)) { array_push($errors, "Password is required."); }
 
 		if (count($errors) == 0) {
-			$password = md5($password);
-			$query = "SELECT * FROM users WHERE email='$email' AND password='$password' ";
-			$results = mysqli_query($db, $query);
+			$query = "SELECT * FROM farmerdetails WHERE email='$email' AND password='$password' ";
+			$results = mysqli_query($conn, $query);
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['email'] = $email;
-				header('location: profile.php');
-			}else {
+				header('location: main.php');
+			}else {	
 				array_push($errors, "Wrong username/password combination");
 			}
 		}
 	}
-	*/
+	
 
+	//wholesaler login
+	if (isset($_POST['loginw'])) {
+
+		$emailw = $_POST['emailw'];
+		$passwordw = $_POST['passwordw'];
+
+		if (empty($emailw)) { array_push($errors, "Email ID is required."); }
+	    if (empty($passwordw)) { array_push($errors, "Password is required."); }
+
+		if (count($errors) == 0) {
+			$query = "SELECT * FROM salerdetails WHERE email='$emailw' AND password='$passwordw' ";
+			$results = mysqli_query($conn, $query);
+			if (mysqli_num_rows($results) == 1) {
+				$_SESSION['email'] = $emailw;
+				header('location: main.php');
+			}else {	
+				array_push($errors, "Wrong username/password combination");
+		}
+	}
+}
 ?>
