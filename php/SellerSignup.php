@@ -30,7 +30,7 @@ include('server.php');
   <li ><a href="current.html">Weather</a></li>
  </div>
  <div class="Signup" style="margin-left: 25%;margin-top: 2%;">
-  <form method="POST"><?php include('errors.php'); ?>
+  <form method="POST"> <?php include('errors.php'); ?>
      <table cellspacing="5px" cellpadding="5px" align="center">
 <tr >
 <td colspan="2">
@@ -57,10 +57,9 @@ include('server.php');
 <td>
 <input type="password" placeholder="Confirm password*" name="confirmpassword">
 </td>
-<td>
-<input type="text" placeholder="Jandhan Account Number*" name="jandhan">
+<<td>
+<input type="text" placeholder="Shop Id*" name="shopid">
 </td>
-
 <tr>
 <td>
 <input type="email" placeholder="Enter your email*" name="email">
@@ -77,7 +76,7 @@ include('server.php');
 
 </table>
 
-     <input  type="submit" value="Sign Up" name="submit" id="submit">
+     <input  type="submit" value="Sign Up" name="wsubmit" id="wsubmit">
      <div id="terms"><br>By signing up, you agree to the <a href="#">Terms</a> of Service and <a href="#">Privacy Policy.</a></div> </form> 
    <div class="footr">
      <p>Already have account ? Click <a href="./login.php">here</a> to login</p>    

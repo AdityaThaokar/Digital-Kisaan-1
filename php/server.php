@@ -20,7 +20,7 @@
 		
 		if (empty($username)) { array_push($errors, "username is required."); }
 		if (empty($password)) { array_push($errors, "password is required."); }
-		if (empty($confirmpassword)) { array_push($errors, "confirmpassword is required."); }
+		if (empty($confirmpassword)) { array_push($errors, "confirm password is required."); }
 		if (empty($phone)) { array_push($errors, "Phone number is required."); }
 		if (empty($aadhar)) { array_push($errors, "aadhar is required."); }
 		if (empty($jandhan)) { array_push($errors, "jandhan is required."); }
@@ -36,8 +36,53 @@
 		$query = "INSERT INTO farmerdetails (username,password,email,phone,aadhar,jandhan,location,date_now,pincode) 
 		VALUES('$username','$password','$email','$phone','$aadhar','$jandhan','$location','$date','$pincode')";
 		$sql = mysqli_query($conn, $query);
+		echo "<script>alert('Succefully registered.')</script>";
 		}	
 	}
+
+
+	//signup for wholesaler
+	if (isset($_POST['wsubmit'])) {
+
+		$username = $_POST['username'];
+		$password =$_POST['password'];
+		$email = $_POST['email'];
+		$confirmpassword=$_POST['confirmpassword'];
+		$phone =$_POST['phone'];
+		$aadhar = $_POST['aadhar'];
+		$shopid = $_POST['shopid'];
+		$location = $_POST['location'];
+		$date = $_POST['date'];
+		$pincode = $_POST['pincode'];
+	
+		
+		if (empty($username)) { array_push($errors, "username is required."); }
+		if (empty($password)) { array_push($errors, "password is required."); }
+		if (empty($confirmpassword)) { array_push($errors, "confirm password is required."); }
+		if (empty($phone)) { array_push($errors, "Phone number is required."); }
+		if (empty($aadhar)) { array_push($errors, "aadhar is required."); }
+		if (empty($shopid)) { array_push($errors, "shop id is required."); }
+		if (empty($location)) { array_push($errors, "location is required."); }
+		if (empty($date)) { array_push($errors, "date is required."); }
+		if (empty($pincode)) { array_push($errors, "pincode is required."); }
+
+		if ($password != $confirmpassword) {
+			echo "<script>alert('The two passwords do not match.')</script>";
+		}
+
+		if (count($errors) == 0) {
+		$query = "INSERT INTO salerdetails (username,password,email,phone,aadhar,shopid,location,date_now,pincode) 
+		VALUES('$username','$password','$email','$phone','$aadhar','$shopid','$location','$date','$pincode')";
+		$sql = mysqli_query($conn, $query);
+		echo "<script>alert('Succefully registered.')</script>";
+		}	
+	}
+
+
+
+
+
+
 
 	//login user
 	/*if (isset($_POST['login'])) {
