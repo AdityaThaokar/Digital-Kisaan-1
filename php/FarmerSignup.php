@@ -1,3 +1,6 @@
+<?php
+include('server.php');
+?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../css/login.css">
@@ -10,15 +13,14 @@
         {types: ['geocode']});
     autocomplete.addListener('place_changed', fillInAddress);
   }
+
   function fillInAddress() {
     var place = autocomplete.getPlace();
+
   }
  </script>
 </head>
-<body> 
-<?php
- include('translate.php');
-?> 
+<body> <?php include('translate.php'); ?>
  <div class="header">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
  <ul>
@@ -27,7 +29,8 @@
    <li><a href="contact.php">Contact</a></li>
   <li ><a href="current.html">Weather</a></li>
  </div>
- <div class="Signup" style="margin-left: 25%;margin-top: 5%;">
+ <div class="Signup" style="margin-left: 25%;margin-top: 2%;">
+  <form method="POST">
      <table cellspacing="5px" cellpadding="5px" align="center">
 <tr >
 <td colspan="2">
@@ -36,46 +39,46 @@
 
 <tr>
 <td>
-<input type="text" placeholder="Create username*">
+<input type="text" placeholder="Create username*" name="username">
 </td>
 <td>
-<input type="text" placeholder="Mobile Number*">
+<input type="text" placeholder="Mobile Number*" name="phone">
 </td>
 
 <tr>
 <td>
-<input type="password" placeholder="Enter password*">
+<input type="password" placeholder="Enter password*" name="password">
 </td>
 <td>
-<input type="text" placeholder="Aadhar Number*">
+<input type="text" placeholder="Aadhar Number*" name="aadhar">
 </td>
 
 <tr>
 <td>
-<input type="password" placeholder="Confirm password*">
+<input type="password" placeholder="Confirm password*" name="confirmpassword">
 </td>
 <td>
-<input type="text" placeholder="Ration Number*">
+<input type="text" placeholder="Jandhan Account Number*" name="jandhan">
 </td>
 
 <tr>
 <td>
-<input type="email" placeholder="Enter your email*">
+<input type="email" placeholder="Enter your email*" name="email">
 </td>
 <td>
-<input type="text" id="location" placeholder="City/District*">
+<input type="text" id="location" placeholder="City/District*" name="location">
 </td>
 
 <tr>
 <td>
-<input type="Radio" name="sex">  Male<input type="Radio" name="sex">  Female
+<input type="text" id="pincode" placeholder="PIN Code*" name="pincode">
 </td>
-<td>Date of birth* - <input type="date"></td>
+<td>Date of birth* - <input type="date" name="date"></td>
 
 </table>
 
-     <input  type="submit" value="SignUp">
-     <div id="terms"><br>By signing up, you agree to the <a href="terms.php">Terms</a> of Service and <a href="privacy.php">Privacy Policy.</a></div>  
+     <input  type="submit" value="Sign Up" name="submit" id="submit">
+     <div id="terms"><br>By signing up, you agree to the <a href="#">Terms</a> of Service and <a href="#">Privacy Policy.</a></div> </form> 
    <div class="footr">
      <p>Already have account ? Click <a href="./login.php">here</a> to login</p>    
   </div>
