@@ -10,10 +10,8 @@
         {types: ['geocode']});
     autocomplete.addListener('place_changed', fillInAddress);
   }
-
   function fillInAddress() {
     var place = autocomplete.getPlace();
-
   }
  </script>
 </head>

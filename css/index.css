@@ -30,7 +30,7 @@ color:white;
   display:inline;
   position:absolute;
   top:0;
-  margin-left:1000px;
+  margin-left:900px;
 }
 .header ul li {
   color:white;
@@ -214,8 +214,8 @@ color:white;
 }
 .Contact{
 	background-color:#1eaa83;
-	height:170px;
-	margin-top:200px;
+	height:200px;
+	margin-top:auto;
 }
 .Contact img {
 	color:white;

@@ -4,6 +4,9 @@
 <title>Login</title>
 </head>
 <body> 
+<?php
+ include('translate.php');
+?> 
 <div class="header">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
  <ul>

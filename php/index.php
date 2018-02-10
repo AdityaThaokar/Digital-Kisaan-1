@@ -2,8 +2,10 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 <link rel="stylesheet" type="text/css" href="../css/index.css">
+<link rel="stylesheet" type="text/css" href="../css/search.css">
 <link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
 <title>Lets Start</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
@@ -17,7 +19,6 @@ window.smoothScroll = function(target) {
         if (!scrollContainer) return;
         scrollContainer.scrollTop += 1;
     } while (scrollContainer.scrollTop == 0);
-
     var targetY = 0;
     do { //find the top of target relatively to the container
         if (target == scrollContainer) break;
@@ -79,6 +80,7 @@ $(document).ready(function (){
 <body> <?php include('translate.php'); ?>
  <div class="header" style="color: white;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
+ 
  <ul> 
    <li><a href="index.php">Home</a></li>
   <li><a href="About.php">About</a></li>
@@ -86,6 +88,7 @@ $(document).ready(function (){
   <li ><a href="current.html">Weather</a></li>
  </div> 
 <div class="Start">
+
 <h2>WELCOME</h2>
 <p>" We, at DigitalKisaan.com, are excited about making life simpler and grocery shopping a 
 breeze! Now you can buy organic food & grocery online at your leisure and from the comfort 
@@ -153,5 +156,7 @@ of your home - no more standing in the long queues at ration shops, provision st
 <img src="../images/franchize.png" width="30px">Franchise
 <br></p>
 <h4>Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
+</div>
+
 </div>
 </html>

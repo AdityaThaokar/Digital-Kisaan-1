@@ -2,6 +2,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 <link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
+<script type="JavaScript">
 <title>Login</title>
 </head>
 <body>
