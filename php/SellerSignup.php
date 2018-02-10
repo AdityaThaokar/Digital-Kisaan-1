@@ -33,10 +33,9 @@ include('server.php');
   <form method="POST"> <?php include('errors.php'); ?>
      <table cellspacing="5px" cellpadding="5px" align="center">
 <tr >
-<td colspan="2">
-<p align="center">Wholesaler SignUp</p>
+<td colspan="2" align="center">
+<p >Wholesaler SignUp</p>
 </td>
-
 <tr>
 <td>
 <input type="text" placeholder="Create username*" name="username">

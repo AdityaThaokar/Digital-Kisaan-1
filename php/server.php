@@ -1,9 +1,9 @@
-	<?php
-	   $errors = array(); 
+<?php
+	$errors = array(); 
 
-		$conn = mysqli_connect('localhost', 'root', '', 'digital_kisan');
+	$conn = mysqli_connect('localhost', 'root', '', 'digital_kisan');
 
-//signup for farmers
+	//signup for farmers
 	if (isset($_POST['submit'])) {
 
 		$username = $_POST['username'];
