@@ -30,7 +30,7 @@ include('server.php');
   <li ><a href="current.html">Weather</a></li>
  </div>
  <div class="Signup" style="margin-left: 25%;margin-top: 2%;">
-  <form method="POST">
+  <form method="POST"> <?php include('errors.php'); ?>
      <table cellspacing="5px" cellpadding="5px" align="center">
 <tr >
 <td colspan="2">

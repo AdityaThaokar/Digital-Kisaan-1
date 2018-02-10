@@ -1,5 +1,5 @@
 	<?php
-	//$errors = array(); 
+	   $errors = array(); 
 
 		$conn = mysqli_connect('localhost', 'root', '', 'digital_kisan');
 
@@ -18,31 +18,25 @@
 		$pincode = $_POST['pincode'];
 	
 		
-		/*if (empty($firstname)) { array_push($errors, "Firstname is required."); }
-		if (empty($lastname)) { array_push($errors, "Lastname is required."); }
-		if (empty($email)) { array_push($errors, "Email is required."); }
-		if (empty($phno)) { array_push($errors, "Phone number is required."); }
-		if (empty($sem)) { array_push($errors, "semester is required."); }
-		if (empty($password_1)) { array_push($errors, "Password is required."); }
-		if (empty($password_2)) { array_push($errors, "Please confirm your password."); }*/
+		if (empty($username)) { array_push($errors, "username is required."); }
+		if (empty($password)) { array_push($errors, "password is required."); }
+		if (empty($confirmpassword)) { array_push($errors, "confirmpassword is required."); }
+		if (empty($phone)) { array_push($errors, "Phone number is required."); }
+		if (empty($aadhar)) { array_push($errors, "aadhar is required."); }
+		if (empty($jandhan)) { array_push($errors, "jandhan is required."); }
+		if (empty($location)) { array_push($errors, "location is required."); }
+		if (empty($date)) { array_push($errors, "date is required."); }
+		if (empty($pincode)) { array_push($errors, "pincode is required."); }
 
 		if ($password != $confirmpassword) {
-			alert("The two passwords do not match.");
+			echo "<script>alert('The two passwords do not match.')</script>";
 		}
-			
-		
-		
-		//$password = md5($confirmpassword);
+
+		if (count($errors) == 0) {
 		$query = "INSERT INTO farmerdetails (username,password,email,phone,aadhar,jandhan,location,date_now,pincode) 
 		VALUES('$username','$password','$email','$phone','$aadhar','$jandhan','$location','$date','$pincode')";
 		$sql = mysqli_query($conn, $query);
-	if ($sql) {
-		echo "<script>alert('Sucessfully registered')</script>";
-		header('location: index.php');
-	}
-	else{
-		echo "<script>alert('Error Registering')</script>";
-	}	
+		}	
 	}
 
 	//login user
@@ -67,10 +61,5 @@
 		}
 	}
 	*/
-
-
-	function alert($msg) {
-    echo "<script type='text/javascript'>alert('$msg');</script>";
-}
 
 ?>
