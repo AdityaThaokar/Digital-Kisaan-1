@@ -27,10 +27,10 @@ include('server.php');
 <img src="../images/email.png" width="30px">DigitalKisaan@service.com<br><br><br>
 <img src="../images/franchize.png" width="30px">Franchise<br><br><br>
 <img src="../images/feedback.png" width="30px">Feedback<br>
-<form method="POST" action="contact.php">
-<input type="text" placeholder="Enter email" name="sender" id="sender"><br>
-<textarea rows="4" width="200px" scrolling="yes" placeholder="Give your feedback here" name="msg" id="msg"></textarea><br>
-<input type="submit" value="send" name="send" id="send"></form>
+<form method="POST">
+<input type="email" placeholder="Enter your email id" name="sender" ><br>
+<textarea rows="4" width="200px" scrolling="yes" placeholder="Give your feedback here" name="msg"></textarea><br>
+<input type="submit" value="Send" name="send" id="send"></form>
 </h5>
  </div>
  <div class="Contact" id="contact">
