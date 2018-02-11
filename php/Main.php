@@ -63,10 +63,10 @@ $('.flexslider').each(function() {
  <input type="submit" value="Search">
  </p>
  <ul> 
-   <li><a href="logout.php">Log Out</a></li>
+   <li><a href="logout.php">Log out</a></li>
    <li><a href="index.php">Home</a></li>
   <li><a href="About.php">About</a></li>
-   <li><a href="contact.php">Contact</button></li>
+   <li><a href="contact.php">Contact</a></li>
   <li ><a href="current.html">Weather</a></li>
  </div> 
  <div class="store">
