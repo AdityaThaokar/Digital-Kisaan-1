@@ -1,6 +1,4 @@
 <?php
-	
-     
     if (isset($_POST['item'])) {
 		if(isset($_POST['cname'])) {
 			$c_name= $_POST['cname'];
@@ -15,23 +13,17 @@
   		$add = $_POST['location'];
   		$pay = $_POST['payoptions'];
   		$contact = implode(',', $_POST['contact']);
-
-
   		$path="uploaded_imgs/";
-
-		
-
 		$path=$path.$_FILES['files']['name'];
 		    
 		if(move_uploaded_file($_FILES['files']['tmp_name'],$path))
 		{
 		echo " ".basename($_FILES['files']['name'])." has been uploaded<br/>";
 		echo '<img src="./uploaded_imgs/'.$_FILES['files']['name'].'" width="100" height="100"/>';
-		$img=$_FILES['files']['name'];
-		   
+		$img=$_FILES['files']['name'];   
 		}
-		$conn = mysqli_connect('localhost', 'root', '', 'digital_kisan') or die ("could not connect to mysql");
-		$sql="INSERT INTO items (`cname`,`description`,`sprice`,`quantity`,`mdate`,`edate`,`img`,`currency`,`country`,`location`,`payoptions`,`contact`) values ('$c_name','$desc','$start_price','$quant','$start_date','$end_date','$path','$curr','$count','$add','$pay','$contact')";
+		$conn = mysqli_connect("localhost","root","","digital_kisan") or die ("could not connect to mysql");
+		$sql="INSERT INTO items (`name`,`description`,`sprice`,`quantity`,`mdate`,`edate`,`img`,`currency`,`country`,`location`,`payment`,`contact`) values ('$c_name','$desc','$start_price','$quant','$start_date','$end_date','$path','$curr','$count','$add','$pay','$contact')";
 		$query=mysqli_query($conn, $sql) or die(mysql_error()) ;
 		if($sql){
      echo ("<SCRIPT LANGUAGE='JavaScript'>
