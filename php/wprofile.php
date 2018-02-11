@@ -50,11 +50,10 @@ include ('translate.php');
 <td>:</td>
 <td></td>
 </table>
-<form id="form" action="" method="post" >
-<input  type="submit" value="Add Item" style="margin-left:30px;" >
-<input  type="submit" value="Remove Item" style="margin-left:300px;">
-<input  type="submit" value="Update Profile" style="margin-left:320px;">
-</form>
+<div style="display:flex;justify-content: space-around;">
+<form id="form" action="additem.php"><input  type="submit" value="Add Item"  ></form>
+<form id="form" action="additem.php"><input  type="submit" value="Remove Item" ></form>
+<form id="form" action="additem.php"><input  type="submit" value="Update Profile" ></form></div>
 </div>
 <br><br><br>
 <div class="Contact" id="contact1">
