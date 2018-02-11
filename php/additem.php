@@ -6,36 +6,57 @@ include ('translate.php');
 	<head>
 		<title> Add Item
 		</title>
-		<link type="text/css" rel="stylesheet" href="css/auction.css">
+		<link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
+		<link rel="stylesheet" type="text/css" href="../css/additem.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
         <script type="text/javascript" src="autocomplete.js"></script>
 	</head>
 	<body>
+	 <div class="header" style="color: white;position:fixed;top:0">
+ <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
+ <input type="text" placeholder="Search">
+ <input type="submit" value="Search">
+ </p>
+ <ul> 
+   <li><a href="logout.php">Log Out</a></li>
+   <li><a href="index.php">Home</a></li>
+  <li><a href="About.php">About</a></li>
+   <li><a href="contact.php">Contact</button></li>
+  <li ><a href="current.html">Weather</a></li>
+ </div> 
+ 
+ 
+ 
+ 
+ <div class="itemform">
 	<h2 align="center">Details Of Item to be sold</h2>
+	<hr></hr>
 	<form id="form" action="uploadaction.php" method="post" enctype="multipart/form-data" >
 		 <div><table align="center">
                         <tr>
                             <td align="right"><label for="cname">Input Name</label></td><td>:</td>
-                            <td><input type="radio" id="cname" name="cname" value="Fertilizers">Fertilizers
-                          <input type="radio" id="cname" name="cname" value="Pesticides">Pesticides
-                            <input type="radio" id="cname" name="cname" value="Vegetative Plating Material">Vegetative Plating Material
-                            <input type="radio" id="cname" name="cname" value="Bio Pesticides">Bio Pesticides
-                            <input type="radio" id="cname" name="cname" value="Animal Feeds">Animal Feeds
-                            <input type="radio" id="cname" name="cname" value="Poultry Feeds">Poultry Feeds
+                            <td><input type="radio" id="cname" name="cname" value="Fertilizers">Fertilizers<br>
+                          <input type="radio" id="cname" name="cname" value="Pesticides">Pesticides<br>
+                            <input type="radio" id="cname" name="cname" value="Vegetative Plating Material">Vegetative Plating Material<br>
+                            <input type="radio" id="cname" name="cname" value="Bio Pesticides">Bio Pesticides<br>
+                            <input type="radio" id="cname" name="cname" value="Animal Feeds">Animal Feeds<br>
+                            <input type="radio" id="cname" name="cname" value="Poultry Feeds">Poultry Feeds<br>
                             <input type="radio" id="cname" name="cname" value="Bio Control Agents">Bio Control Agents
                         </td>
                         </tr>     
                        <tr>
                                 <td align="right"><label for="description">Description</label></td><td>:</td>
-                                <td><textarea id="description" name="description" rows="3" cols="50">
+                                <td><textarea id="description" name="description" rows="3" cols="40">
                                 </textarea></td>
                         </tr>
                         <tr>
                             <td align="right"><label for="sprice">Start Price( per kg )</label></td><td>:</td>
-                            <td><input type="text" id="sprice" name="sprice" required></td>
+                            <td><input type="text" placeholder="Eg.10"id="sprice" name="sprice" required></td>
                         </tr> 
                         <tr>
                             <td align="right"><label for="quantity">Quantity( in kgs )</label></td><td>:</td>
-                            <td><input type="text" id="quantity" name="quantity" required></td>
+                            <td><input type="text" placeholder="Eg.20" id="quantity" name="quantity" required></td>
                         </tr> 
                         <tr>
                             <td align="right"><label for="mdate">Manufacturing Date</label></td><td>:</td>
@@ -87,22 +108,31 @@ include ('translate.php');
                             </tr>
                         <tr>
                             <td align="right"><label for="payoptions">Payment Options</label></td><td>:</td>
-                            <td><input type="radio" id="payoptions" name="payoptions">Payment On Delivery 
-                            <input type="radio" id="payoptions" name="payoptions" >Credit Card
-                            <input type="radio" id="payoptions" name="payoptions" >Debit Card
+                            <td><input type="radio" id="payoptions" name="payoptions">On Delivery <br>
+                            <input type="radio" id="payoptions" name="payoptions" >Credit Card<br>
+                            <input type="radio" id="payoptions" name="payoptions" >Debit Card<br>
                             <input type="radio" id="payoptions" name="payoptions" >Net Bamking</td>
                         </tr>
                         <tr>
                                 <td><label for="contact">Method to contact you</label></td><td>:</td>
-                                <td><input type="checkbox" id="contact" name="contact" >Email 
-                                <input type="checkbox" id="contact" name="contact" >Whatsapp
+                                <td><input type="checkbox" id="contact" name="contact" >Email <br>
+                                <input type="checkbox" id="contact" name="contact" >Whatsapp<br>
                                     <input type="checkbox" id="contact" name="contact" >In-app chat</td>
                             </tr>  
                      </table>
-                </div>   <br><br>
+                </div>  <hr></hr> <br><br>
                 <center><input type="submit" value="Submit" name="submit" id="submit" ></center>
         </form>
          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeMQgP036S3bA1yPmzGABcVN-COuYIHLc&libraries=places&callback=initAutocomplete" async defer></script>
+	</div>
+	<div class="Contact" id="contact">
+<p>
+<img src="../images/toll.png" width="30px">Toll Free 1800-274-3131
+<img src="../images/email.png" width="30px">DigitalKisaan@service.com
+<img src="../images/franchize.png" width="30px">Franchise
+<br></p>
+<h4>Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
+</div>
 	</body>
 
 </html>

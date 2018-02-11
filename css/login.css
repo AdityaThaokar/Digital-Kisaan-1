@@ -200,8 +200,10 @@ color:white;
 }
 .SignUp input[type=submit]:hover{
 	color:white;
-	background-color:#1eaa83;
-	
+background-color:#1eaa83;}
+.SignUp form{
+	font-size:10px;
+}	
 }
 #terms
 {
