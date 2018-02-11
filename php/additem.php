@@ -1,5 +1,6 @@
 <?php
 include ('translate.php');
+include('server.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,7 +24,7 @@ include ('translate.php');
    <li><a href="index.php">Home</a></li>
   <li><a href="About.php">About</a></li>
    <li><a href="contact.php">Contact</a></li>
-  <li><a href="current.html">Weather</a></li>
+  <li><a href="current.php">Weather</a></li>
  </div> 
  
  <div class="itemform">
@@ -105,20 +106,20 @@ include ('translate.php');
                             </tr>
                         <tr>
                             <td align="right"><label for="payoptions">Payment Options</label></td><td>:</td>
-                            <td><input type="radio" id="payoptions" name="payoptions">On Delivery <br>
-                            <input type="radio" id="payoptions" name="payoptions" >Credit Card<br>
-                            <input type="radio" id="payoptions" name="payoptions" >Debit Card<br>
-                            <input type="radio" id="payoptions" name="payoptions" >Net Bamking</td>
+                            <td><input type="radio" id="payoptions" name="payoptions" value="On Delivery">On Delivery <br>
+                            <input type="radio" id="payoptions" name="payoptions" value="Credit Card" >Credit Card<br>
+                            <input type="radio" id="payoptions" name="payoptions" value="Debit Card" >Debit Card<br>
+                            <input type="radio" id="payoptions" name="payoptions" value="Net Bamking" >Net Bamking</td>
                         </tr>
                         <tr>
                                 <td><label for="contact">Method to contact you</label></td><td>:</td>
-                                <td><input type="checkbox" id="contact" name="contact" >Email <br>
-                                <input type="checkbox" id="contact" name="contact" >Whatsapp<br>
-                                    <input type="checkbox" id="contact" name="contact" >In-app chat</td>
+                                <td><input type="checkbox" id="contact" name="contact[]" value="Email">Email <br>
+                                <input type="checkbox" id="contact" name="contact[]" value="Whatsapp">Whatsapp<br>
+                                    <input type="checkbox" id="contact" name="contact[]" value="In-app chat">In-app chat</td>
                             </tr>  
                      </table>
                 </div>  <hr></hr> <br><br>
-                <center><input type="submit" value="Submit" name="submit" id="submit" ></center>
+                <center><input type="submit" value="Submit" name="item" id="item" ></center>
         </form>
          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeMQgP036S3bA1yPmzGABcVN-COuYIHLc&libraries=places&callback=initAutocomplete" async defer></script>
 	</div>

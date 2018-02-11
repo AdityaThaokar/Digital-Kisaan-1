@@ -3,7 +3,7 @@
 session_start();
 	$errors = array(); 
 
-	$conn = mysqli_connect('localhost', 'root', '', 'digital_kisan');
+	$conn = mysqli_connect('localhost', 'root', '', 'digital_kisan') or die ("could not connect to mysql"); 
 
 	//signup for farmers
 	if (isset($_POST['submit'])) {
