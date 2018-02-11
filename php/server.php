@@ -117,7 +117,7 @@ session_start();
 			$results = mysqli_query($conn, $query);
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['email'] = $emailw;
-				header('location: additem.php');
+				header('location: wprofile.php');
 			}else {	
 				array_push($errors, "Wrong username/password combination");
 		}
