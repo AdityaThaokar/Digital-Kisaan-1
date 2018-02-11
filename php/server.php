@@ -93,8 +93,10 @@ session_start();
 		if (count($errors) == 0) {
 			$query = "SELECT * FROM farmerdetails WHERE email='$email' AND password='$password' ";
 			$results = mysqli_query($conn, $query);
+			$arr=mysqli_fetch_array($results);
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['email'] = $email;
+				$_SESSION['location'] = $arr['location'];
 				header('location: main.php');
 			}else {	
 				array_push($errors, "Wrong username/password combination");
@@ -115,8 +117,10 @@ session_start();
 		if (count($errors) == 0) {
 			$query = "SELECT * FROM salerdetails WHERE email='$emailw' AND password='$passwordw' ";
 			$results = mysqli_query($conn, $query);
+			$arr=mysqli_fetch_array($results);
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['email'] = $emailw;
+				$_SESSION['location'] = $arr['location'];
 				header('location: wprofile.php');
 			}else {	
 				array_push($errors, "Wrong username/password combination");

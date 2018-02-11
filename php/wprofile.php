@@ -23,7 +23,7 @@ include ('translate.php');
    <li><a href="index.php">Home</a></li>
   <li><a href="About.php">About</a></li>
    <li><a href="contact.php">Contact</a></li>
-  <li><a href="current.html">Weather</a></li>
+  <li><a href="current.php">Weather</a></li>
  </div> 
  
 <div class="bg"><br><h2>Wholeseller Profile</h2>

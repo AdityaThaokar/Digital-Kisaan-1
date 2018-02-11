@@ -85,7 +85,7 @@ $(document).ready(function (){
    <li><a href="index.php">Home</a></li>
   <li><a href="About.php">About</a></li>
    <li><button type="button" onclick="smoothScroll(document.getElementById('contact'))">Contact</button></li>
-  <li ><a href="current.html">Weather</a></li>
+  <li ><a href="current.php">Weather</a></li>
  </div> 
 <div class="Start">
 

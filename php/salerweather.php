@@ -1,11 +1,15 @@
-<!DOCTYPE html>
+<?php 
+include('server.php');
+?>
+<!DOCTYPE html >
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Weather Forecast</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
-    <link rel="stylesheet" href="style.css">   
+    <link rel="stylesheet" href="style.css"> 
+    <script type="text/javascript" src="autocomplete.js"></script>  
 </head>
 <body>
 <div class="jumbotron" style="margin-bottom:0px; background-color:#1eaa83; color:white;">
@@ -21,8 +25,8 @@
         
         <div class="row form-group form-inline" id="cityDiv">
            
-            <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name" >
-            <button id="submitCity" class="btn btn-primary" style="background-color:#1eaa83;border-color:#1eaa83;">Search City</button>
+            <input type="text" name="city" id="city" class="form-control" value='<?php echo(htmlspecialchars($_SESSION["location"], ENT_QUOTES)); ?>' >
+            <button id="submitCity" class="btn btn-primary" style="background-color:#1eaa83;border-color:#1eaa83;">Click me</button>
         </div>
 
     </div>
@@ -31,7 +35,7 @@
 
 <div class="footer" style="background-color:#1eaa83;">
     <div class="container">
-        <div class="row text-center" style="padding-top:30px;background-color:#1eaa83;">
+        <div class="row text-center" id="location" style="padding-top:30px;background-color:#1eaa83;">
             <p style="color:white; background-color:#1eaa83;">Digital Kisan</p>
         </div>
     </div>
@@ -40,6 +44,6 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
 <script src="weather.js"></script>   
-      
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeMQgP036S3bA1yPmzGABcVN-COuYIHLc&libraries=places&callback=initAutocomplete" async defer></script>
 </body>
 </html>
