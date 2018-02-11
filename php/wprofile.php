@@ -27,34 +27,39 @@ include ('translate.php');
  </div> 
  
 <div class="bg"><br><h2>Wholeseller Profile</h2>
-<div class="profile">
-<table  cellpadding="5">
+<div class="profile" style="display: flex;flex-direction:row;justify-content: space-around;flex-grow: 1;">
+<table  cellpadding="5" style="margin-top: 2%;">
 <tr>
 <td rowspan="5">
-<img src="../images/Wprofile.jpg" width="170px">
+<img src="../images/Wprofile.jpg" width="170px" >
 </td>
-<td>Name</td>
-<td>:</td>
-<td></td>
-<tr>
-<td>Email ID</td>
-<td>:</td>
-<td></td><tr>
-<td>Adress</td>
-<td>:</td>
-<td></td><tr>
-<td>Shop ID</td>
-<td>:</td>
-<td></td><tr>
-<td>Aadhar No.</td>
-<td>:</td>
-<td></td>
 </table>
-<div style="display:flex;justify-content: space-around;">
-<form id="form" action="additem.php"><input  type="submit" value="Add Item"  ></form>
-<form id="form" action="additem.php"><input  type="submit" value="Remove Item" ></form>
-<form id="form" action="additem.php"><input  type="submit" value="Update Profile" ></form></div>
+<div style="display: flex;flex-direction: column;color: #000000;margin-left: 5%;justify-content: flex-start;flex-grow: 2;">
+<?php
+include('server.php');
+$conn=mysqli_connect("localhost","root","","digital_kisan");
+$emailw = $_SESSION['email'];
+$sql="select * from salerdetails where email='$emailw'";
+
+$sel=mysqli_query($conn,$sql) or die(mysql_error()); 
+
+while ($arr=mysqli_fetch_array($sel)) 
+{
+echo "<h4> Username:  ".$arr['username']."</h4>";
+echo "<h4> Email: ".$arr['email']."</h4>";
+echo "<h4> Phone: ".$arr['phone']."</h4>";
+echo "<h4> Aadhar No.: ".$arr['aadhar']."</h4>";
+echo "<h4> Shop Id.: ".$arr['shopid']."</h4>";
+echo "<h4> Address: ".$arr['location']."</h4>";
+}
+?> 
 </div>
+<div style="display:flex;flex-direction: column;flex-grow: 1; justify-content: space-around;margin-top: 2%;">
+<form id="form" action="additem.php"><input  type="submit" value="Add Item"  ></form>
+<form id="form" action=""><input  type="submit" value="Remove Item" ></form>
+<form id="form" action=""><input  type="submit" value="View Items" ></form></div>
+</div>
+
 <br><br><br>
 <div class="Contact" id="contact1">
 <p>
