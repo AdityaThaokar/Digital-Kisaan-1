@@ -10,6 +10,7 @@ include('server.php');
     <link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
     <link rel="stylesheet" href="style.css"> 
     <script type="text/javascript" src="autocomplete.js"></script>  
+
 </head>
 <body>
 <div class="jumbotron" style="margin-bottom:0px; background-color:#1eaa83; color:white;">
@@ -19,7 +20,7 @@ include('server.php');
 <div class="container" style="height:650px;">
     <div class="row" >
         <div class="col-md-12" style="margin-bottom:10px;">
-            <h3 class="text-center text-primary" style="color:#0a7f5e;">Enter City Name</h3>
+            <h3 class="text-center text-primary" style="color:#0a7f5e;">Current weather in your area</h3>
             <span id="error" class="text-center"></span>
         </div>
         
@@ -45,5 +46,8 @@ include('server.php');
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
 <script src="weather.js"></script>   
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeMQgP036S3bA1yPmzGABcVN-COuYIHLc&libraries=places&callback=initAutocomplete" async defer></script>
+       <script type="text/javascript">
+document.getElementById("submitCity").click();
+</script>
 </body>
 </html>

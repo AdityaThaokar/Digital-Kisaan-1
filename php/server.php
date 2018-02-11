@@ -127,4 +127,24 @@ session_start();
 		}
 	}
 }
+
+
+
+
+//feedback
+if(isset($_POST['send']))
+{
+	$sender=$_POST['sender'];
+	$msg=$_POST['msg'];
+
+	if (count($errors) == 0) {
+		$query = "INSERT INTO feedback (sender,msg) VALUES('$sender','$msg')";
+		$sql = mysqli_query($conn, $query);
+		echo "<script>alert('Feedback was sent Succefully.')</script>";
+		}	
+		else{
+			echo "<script>alert('An error was encountered.')</script>";
+		}
+
+}
 ?>
