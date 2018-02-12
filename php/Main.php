@@ -12,10 +12,10 @@ else {
 ?>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 <link rel="stylesheet" type="text/css" href="../css/index.css">
 <link rel="stylesheet" type="text/css" href="../css/search.css">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
 <link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
 <title>Digital Kisaan</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -54,10 +54,8 @@ $('.flexslider').each(function() {
 </script>
 
 </head>
-<body> <?php
- include('translate.php');
-?> 
- <div class="header" style="color: white;position:fixed;top:0">
+<body style="background:#e0e1e2;"> 
+ <div class="header" style="color: white;position:fixed;top:0;box-shadow: 10px 8px 4px 10px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
  <input type="text" placeholder="Search">
  <input type="submit" value="Search">
@@ -67,10 +65,14 @@ $('.flexslider').each(function() {
    <li><a href="index.php">Home</a></li>
   <li><a href="About.php">About</a></li>
    <li><a href="contact.php">Contact</a></li>
-  <li ><a href="current.html">Weather</a></li>
+  <li ><a href="current.html">Weather</a></li></ul>
+  <marquee behavior=scroll direction="left" scrollamount="5" style="position:fixed;background:#1eaa83">Flat 10% on purchase more than 5500 Rs.
+Buy Any products, If your cart value is more than 5500 Rs ,
+you can avail a discount of 10% on your cart value.</marquee>
  </div> 
- <div class="store">
-    <div class="containr">
+ <div class="store" style="background:#e0e1e2;">
+ 		 
+    <div class="containr" >
         <ul> 
         <li><div class="butn">
 		<a href="#">Seeds</a>
@@ -121,23 +123,16 @@ $('.flexslider').each(function() {
 		<a href="">Organic Stimulant</a>
 		</div>
 		</div></li>
-		 <marquee behavior=scroll direction="left" scrollamount="2" style="position:relative">Flat 10% on purchase more than 5500 Rs.
-Buy Any products, If your cart value is more than 5500 Rs ,
-you can avail a discount of 10% on your cart value.</marquee>
-		 <li ><a href="#" style="margin-left:50px;">Mycart</a></li>
-		 <li ><a href="#" >Account</a></li>
+		 <li><a href="#" onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'"style="background:none;border-radius:2px;border:none;height:22px;margin-left:180px;">
+		 <img src="../images/cart.png" width="20" style="border-radius:30%;"/>&nbsp;My cart(0)</a></li>
+		 <li ><a onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'"href="#"style="background:none;border-radius:2px;border:none;height:22px;"><img src="../images/Wprofile.jpg" width="20" style="border-radius:30%;"/>&nbsp;Account</a></li>
     </div>
-	 <div class="frames">
-	 <div class="left">
-	 <ul>
-	 <h4><font color="yellow"><b>Categories</b></font></h4>
-	 <li>Fertilsers</li>
-	 <li>Solar</li>
-	 <li>Organic food</li>
-	 </ul>
-	 <div class="prices">
-	 <h4><font color="yellow"><b>Current Market Prices</b></font></h4>
-	 <hr><p>
+	 <div class="frames" style="background:#f4f5f7;border-style:solid;border-width:1px;border-color:#e5e5e5;">
+	 <div class="left" style="background:#e8e9ea;border-style:solid;border-width:1px;border-color:#edf2f4">
+	 
+	 <div class="prices" style="background:#e8e9ea;">
+	 <h4><font color="#6a6c6d"><b>Current Market Prices</b></font></h4>
+	 <p style="color:black;">
 	 Amaranth leaves:₹ 13Kg / Pcs<br>
 	 Ash gourd:₹ 10Kg / Pcs<br>
 	 Banana flower:₹ 20Kg / Pcs<br>
@@ -149,7 +144,7 @@ you can avail a discount of 10% on your cart value.</marquee>
 	Carrot:₹ 11Kg / Pcs<br></p>
 	 </div>
 	 </div>
- <div class="right">
+ <div class="right" style="background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;">
     <table style="clear: both; border-collapse: collapse; border-spacing: 0; width: 100%;" >
 	<tr>
 	<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Brown_Flax_Seeds.jpg/1200px-Brown_Flax_Seeds.jpg" width="300px"><p>Name<br>Price:<br><input type="button" value="Add to cart" ><input type="button" value="Buy now" ></td>

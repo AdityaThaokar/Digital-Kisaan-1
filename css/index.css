@@ -16,6 +16,7 @@ color:white;
 	width:100%;
 	position:relative;
 	top:0;
+	box-shadow: 10px 8px 4px 10px #4e4e4f;
 	}
 .header p{
 	font-family:sans-serif;

@@ -97,6 +97,7 @@ session_start();
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['email'] = $email;
 				$_SESSION['location'] = $arr['location'];
+				$_SESSION['username'] = $arr['username'];
 				header('location: main.php');
 			}else {	
 				array_push($errors, "Wrong username/password combination");
