@@ -1,5 +1,5 @@
 <?php 
-include('translate.php');
+
 include('server.php');
 if(isset($_SESSION['email'])){
 	$username = $_SESSION['username'];
@@ -55,23 +55,32 @@ $('.flexslider').each(function() {
 
 </head>
 <body style="background:#e0e1e2;"> 
- <div class="header" style="color: white;position:fixed;top:0;box-shadow: 10px 8px 4px 10px #4e4e4f;">
+<div class="header" style="height:80px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
- <input type="text" placeholder="Search">
+ <input type="text" placeholder="Search" >
  <input type="submit" value="Search">
  </p>
- <ul> 
+ <ul style="margin-left:900px;"> 
    <li><a href="logout.php">Log out</a></li>
    <li><a href="index.php">Home</a></li>
   <li><a href="About.php">About</a></li>
    <li><a href="contact.php">Contact</a></li>
-  <li ><a href="current.html">Weather</a></li></ul>
-  <marquee behavior=scroll direction="left" scrollamount="5" style="position:fixed;background:#1eaa83">Flat 10% on purchase more than 5500 Rs.
+  <li><a href="current.php">Weather</a></li></div> 
+ <marquee behavior=scroll direction="left" scrollamount="5" style="position:relative;background:#e9f6f9">Flat 10% on purchase more than 5500 Rs.
 Buy Any products, If your cart value is more than 5500 Rs ,
 you can avail a discount of 10% on your cart value.</marquee>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<div class="bg"><div id="google_translate_element" style="margin-left:1170px;"></div>
+  
  </div> 
  <div class="store" style="background:#e0e1e2;">
- 		 
+ 		 <br>
     <div class="containr" >
         <ul> 
         <li><div class="butn">

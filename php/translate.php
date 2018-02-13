@@ -1,6 +1,6 @@
 <?php
 
-echo '<div id="google_translate_element"> Translate </div>
+echo '<div id="google_translate_element"  > Translate </div>
 
 <script type="text/javascript">
 function googleTranslateElementInit() {

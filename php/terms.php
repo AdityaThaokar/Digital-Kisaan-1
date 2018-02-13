@@ -7,17 +7,22 @@
 <title>Terms</title>
 </head>
 <body> 
-<?php
- include('translate.php');
-?> 
-<div class="header">
+<div class="header" style="height:100px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
- <ul>
-  <li><a href="index.php">Home</a></li>
+ <div id="google_translate_element" style="margin-left:1170px;"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ <ul> 
+   <li><a href="index.php">Home</a></li>
   <li><a href="About.php">About</a></li>
-  <li><a href="contact.php">Contact</a></li>
-  <li ><a href="current.html">Weather</a></li>
- </div>
+   <li><button type="button" onclick="smoothScroll(document.getElementById('contact'))">Contact</button></li>
+  <li ><a href="current.php">Weather</a></li>
+ </div> <br><br>
  <div class="terms">
 <p>Terms and Conditions</p>
 <h5>The Terms and Conditions (T&C) contained herein along with the Privacy Policy and Terms of Use, 

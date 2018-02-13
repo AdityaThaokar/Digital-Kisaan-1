@@ -1,5 +1,5 @@
 <?php
-include ('translate.php');
+
 include('server.php');
 ?>
 <!DOCTYPE html>
@@ -14,22 +14,34 @@ include('server.php');
         <script type="text/javascript" src="autocomplete.js"></script>
 	</head>
 	<body>
-	 <div class="header" style="color: white;position:fixed;top:0">
+	 <div class="header" style="height:100px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
- <input type="text" placeholder="Search">
+ <input type="text" placeholder="Search" style="height:10px;">
  <input type="submit" value="Search">
  </p>
- <ul> 
+ <ul style="margin-left:900px;"> 
    <li><a href="logout.php">Log out</a></li>
    <li><a href="index.php">Home</a></li>
   <li><a href="About.php">About</a></li>
    <li><a href="contact.php">Contact</a></li>
-  <li><a href="current.php">Weather</a></li>
- </div> 
+  <li><a href="current.php">Weather</a></li></div> 
+  <div style="background:#f4f5f7">
  
- <div class="itemform">
-	<h2 align="center">Details Of Item to be sold</h2>
-	<hr></hr>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ <div class="bg"><div id="google_translate_element" style="margin-left:1170px;"></div>
+ <h2 align="center" style="color:#919191;font-size:30px;">Details Of Item to be sold</h2>
+ <div class="itemform" style="background:white;color:#151719;border-style: solid;
+	border-radius:10px;
+	border-width:1px;
+	border-color:#e5e5e5;">
+	
+	
 	<form id="form" action="uploadaction.php" method="post" enctype="multipart/form-data" >
 		 <div><table align="center">
                         <tr>
@@ -118,10 +130,11 @@ include('server.php');
                                     <input type="checkbox" id="contact" name="contact[]" value="In-app chat">In-app chat</td>
                             </tr>  
                      </table>
-                </div>  <hr></hr> <br><br>
+                </div>  <hr style="background:grey"></hr> <br><br>
                 <center><input type="submit" value="Submit" name="item" id="item" ></center>
         </form>
          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeMQgP036S3bA1yPmzGABcVN-COuYIHLc&libraries=places&callback=initAutocomplete" async defer></script>
+	</div>
 	</div>
 	<div class="Contact" id="contact">
 <p>
@@ -129,7 +142,7 @@ include('server.php');
 <img src="../images/email.png" width="30px">DigitalKisaan@service.com
 <img src="../images/franchize.png" width="30px">Franchise
 <br></p>
-<h4>Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
+<h4 align="center">Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
 </div>
 	</body>
 

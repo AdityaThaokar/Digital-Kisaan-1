@@ -13,6 +13,7 @@ include('server.php');
 
 </head>
 <body>
+
 <div class="jumbotron" style="margin-bottom:0px; background-color:#1eaa83; color:white;">
     <h2 class="text-center" style="font-size:40px; font-weight:600;">Get Current Weather Information</h2>
 </div>

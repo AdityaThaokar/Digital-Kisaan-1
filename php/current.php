@@ -1,5 +1,4 @@
 <?php 
-include('translate.php');
 include('server.php');
 if(isset($_SESSION['location'])){
     $location = $_SESSION['location'];
@@ -19,9 +18,16 @@ if(isset($_SESSION['location'])){
 </head>
 <body>
 <div class="jumbotron" style="margin-bottom:0px; background-color:#1eaa83; color:white;">
-    <h2 class="text-center" style="font-size:40px; font-weight:600;">Get Current Weather Information</h2>
+    <h2 class="text-center" style="font-size:40px; font-weight:600;"><img src="../images/kisaanlogo.png" width="90px" >Get Current Weather Information</h2>
 </div>
+<div id="google_translate_element" style="margin-left:1170px;"></div>
 
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <div class="container" style="height:650px;">
     <div class="row" >
         <div class="col-md-12" style="margin-bottom:10px;">

@@ -7,7 +7,7 @@
 <?php
  include('translate.php');
 ?> 
-<div class="header">
+<div class="header" style="color: white;position:fixed;top:0;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
  <ul>
   <li>Home</li>
