@@ -1,5 +1,4 @@
 <?php 
-
 include('server.php');
 if(isset($_SESSION['email'])){
 	$username = $_SESSION['username'];
@@ -153,7 +152,28 @@ function googleTranslateElementInit() {
 	Carrot:₹ 11Kg / Pcs<br></p>
 	 </div>
 	 </div>
- <div class="right" style="background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;">
+	 <div class="right" style="background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;width: 80%;">
+	 <div class="tab-content">
+	 	<div id="Items" class="tab-pane fade in active">
+	 		<?php
+	 		$query = "SELECT * FROM items ORDER BY name ASC";
+	 		$result = mysqli_query($conn,$query);
+	 		while($row = mysqli_fetch_array($result))
+	 		{
+	 		?>
+	 		<div class="col-md-4" style="margin-top:12px; ">
+	 			<div style="border: 1px solid #333;background-color:#f1f1f1;border-radius: 5px;">
+	 				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Brown_Flax_Seeds.jpg/1200px-Brown_Flax_Seeds.jpg"" class="img-responsive" /><br>
+	 				<h4 class="text-info"><?php echo $row["name"]; ?></h4>
+	 				<h4 class="text-danger">Rs.<?php echo $row["sprice"]; ?></h4>
+	 			</div>
+	 		</div>
+	 	</div>
+	 	<?php } ?>
+	 </div>
+</div>
+
+ <!--div class="right" style="background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;">
     <table style="clear: both; border-collapse: collapse; border-spacing: 0; width: 100%;" >
 	<tr>
 	<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Brown_Flax_Seeds.jpg/1200px-Brown_Flax_Seeds.jpg" width="300px"><p>Name<br>Price:<br><input type="button" value="Add to cart" ><input type="button" value="Buy now" ></td>
@@ -168,7 +188,7 @@ function googleTranslateElementInit() {
 	<td><img src="https://cdn.sribu.com/assets/media/contest_detail/2012/11/label-for-pesticides-50b5876c3c0aa1703d000148/bf4252290f.jpg" width="300px"><p>Name<br>Price:<br><input type="button" value="Add to cart" ><input type="button" value="Buy now" ></td>
 	<td><img src="http://www.twentyfournews.com/wp-content/uploads/2016/06/image2.png" width="300px"><p>Name<br>Price:<br><input type="button" value="Add to cart" ><input type="button" value="Buy now" ></td>
 	</table>
- </div> 
+ </div>  -->
  </div>
 <div class="Contact1" id="contact">
 <p>
