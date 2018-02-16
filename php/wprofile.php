@@ -31,7 +31,7 @@ function googleTranslateElementInit() {
 }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<div class="bg"><div id="google_translate_element" style="margin-left:1170px;"></div><br><h2>Wholeseller Profile</h2>
+<div class="bg" style="height:auto;"><div id="google_translate_element" style="margin-left:1170px;"></div><br><h2>Wholeseller Profile</h2>
 <div class="profile" style="display: flex;flex-direction:row;justify-content: space-around;flex-grow: 1;">
 <table  cellpadding="5" style="margin-top: 2%;">
 <tr>
@@ -65,15 +65,14 @@ echo "<h4> Address: ".$arr['location']."</h4>";
 <form id="form" action=""><input  type="submit" value="View Items" ></form></div>
 </div>
 
-<br>
+<br><br>
 <div class="Contact" id="contact1">
 <p>
 <img src="../images/toll.png" width="30px">Toll Free 1800-274-3131
 <img src="../images/email.png" width="30px">DigitalKisaan@service.com
 <img src="../images/franchize.png" width="30px">Franchise
-<br></p>
+</p>
 <h4 align="center">Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
 </div> </div>
 	</body>
-
 </html>
