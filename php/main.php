@@ -51,7 +51,13 @@ $('.flexslider').each(function() {
   $(window).delay(1000).trigger('resize'); //make sure height is right load assets loaded
 }})
 </script>
-
+<style type="text/css">
+	#bck img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+</style>
 </head>
 <body style="background:#e0e1e2;"> 
 <div class="header" style="height:80px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
@@ -152,7 +158,7 @@ function googleTranslateElementInit() {
 	Carrot:₹ 11Kg / Pcs<br></p>
 	 </div>
 	 </div>
-	 <div class="right" style="background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;width: 80%;">
+	 <div class="right" style="background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;width: 80%;display: flex-wrap:wrap;">
 	 <div class="tab-content">
 	 	<div id="Items" class="tab-pane fade in active">
 	 		<?php
@@ -162,14 +168,15 @@ function googleTranslateElementInit() {
 	 		{
 	 		?>
 	 		<div class="col-md-4" style="margin-top:12px; ">
-	 			<div style="border: 1px solid #333;background-color:#f1f1f1;border-radius: 5px;">
-	 				<img src="<?php echo $row["img"]; ?>" class="img-responsive" /><br>
+	 			<div id="bck" style="border: 1px solid #333;background-color:#f1f1f1;border-radius: 5px;">
+	 				<img src="<?php echo $row["img"]; ?>" class="img-responsive" align="center"/><br>
 	 				<h4 class="text-info"><?php echo $row["name"]; ?></h4>
 	 				<h4 class="text-danger">Rs.<?php echo $row["sprice"]; ?></h4>
 	 			</div>
 	 		</div>
+	 		<?php } ?>
 	 	</div>
-	 	<?php } ?>
+	 	
 	 </div>
 </div>
 
