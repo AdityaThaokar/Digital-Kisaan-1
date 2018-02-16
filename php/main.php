@@ -55,6 +55,8 @@ $('.flexslider').each(function() {
 	#bck img {
 	margin-left: auto;
 	margin-right: auto;
+	width: 100%;
+	height: 20%;
 	display: block;
 }
 </style>
@@ -159,7 +161,7 @@ function googleTranslateElementInit() {
 	 </div>
 	 </div>
 	 <div class="right" style="background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;width: 80%;display: flex-wrap:wrap;">
-	 <div class="tab-content">
+	 <div class="tab-content" style="display: flex;flex-wrap: wrap;">
 	 	<div id="Items" class="tab-pane fade in active">
 	 		<?php
 	 		$query = "SELECT * FROM items ORDER BY name ASC";
