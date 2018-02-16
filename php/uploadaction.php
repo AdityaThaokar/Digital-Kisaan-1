@@ -1,9 +1,11 @@
 <?php
+include('server.php');
     if (isset($_POST['item'])) {
 		if(isset($_POST['cname'])) {
 			$c_name= $_POST['cname'];
 		}
   		$desc = $_POST['description'];
+      $owner=$_SESSION['email'];
   		$start_price = $_POST['sprice'];
   		$quant = $_POST['quantity'];
   		$start_date = date('Y-m-d', strtotime($_POST['mdate']));
@@ -23,19 +25,20 @@
 		$img=$_FILES['files']['name'];   
 		}
 		$conn = mysqli_connect("localhost","root","","digital_kisan") or die ("could not connect to mysql");
-		$sql="INSERT INTO items (`name`,`description`,`sprice`,`quantity`,`mdate`,`edate`,`img`,`currency`,`country`,`location`,`payment`,`contact`) values ('$c_name','$desc','$start_price','$quant','$start_date','$end_date','$path','$curr','$count','$add','$pay','$contact')";
+		$sql="INSERT INTO items (`name`,`description`,`sprice`,`quantity`,`mdate`,`edate`,`img`,`currency`,`country`,`location`,`payment`,`contact`,`owner`) values ('$c_name','$desc','$start_price','$quant','$start_date','$end_date','$path','$curr','$count','$add','$pay','$contact','$owner')";
 		$query=mysqli_query($conn, $sql) or die(mysql_error()) ;
 		if($sql){
      echo ("<SCRIPT LANGUAGE='JavaScript'>
        window.alert('Added Succesfully ');
       </SCRIPT>");
+     header('Location: wprofile.php');
 }		
     }
 ?>
 <html>
 <body class="hold-transition login-page">
 <?php
-header('Location: wprofile.php');
+
 ?>
 </body>
 </html>
