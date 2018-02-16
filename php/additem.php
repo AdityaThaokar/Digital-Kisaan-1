@@ -101,7 +101,7 @@ function googleTranslateElementInit() {
                             <td align="right"><label for="currency">Currency</label></td><td>:</td>
                         	<td><select id="currency" name="currency">
                         	<option value="Dollars">$ Dollars</option>
-                        	<option value=:DOllars>Rupees</option>
+                        	<option value="Rupees">Rupees</option>
                         	</select></td>
                         </tr>
                         <tr>
