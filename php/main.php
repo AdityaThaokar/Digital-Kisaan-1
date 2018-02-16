@@ -163,7 +163,7 @@ function googleTranslateElementInit() {
 	 		?>
 	 		<div class="col-md-4" style="margin-top:12px; ">
 	 			<div style="border: 1px solid #333;background-color:#f1f1f1;border-radius: 5px;">
-	 				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Brown_Flax_Seeds.jpg/1200px-Brown_Flax_Seeds.jpg"" class="img-responsive" /><br>
+	 				<img src="<?php echo $row["img"]; ?>" class="img-responsive" /><br>
 	 				<h4 class="text-info"><?php echo $row["name"]; ?></h4>
 	 				<h4 class="text-danger">Rs.<?php echo $row["sprice"]; ?></h4>
 	 			</div>

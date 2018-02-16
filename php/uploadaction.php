@@ -38,7 +38,7 @@ include('server.php');
 <html>
 <body class="hold-transition login-page">
 <?php
-
+header("wprofile.php");
 ?>
 </body>
 </html>
