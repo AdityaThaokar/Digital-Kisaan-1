@@ -35,6 +35,7 @@
 	color:grey;
 }
 .Contact1{
+	
 	background-color:#1eaa83;
 	height:150px;
 	margin-top:auto;
@@ -138,6 +139,7 @@ margin:auto;}
 	width:100%;
 	background-color:#e0e2e5;
 	padding:10px;
+	
 }
 .left{
 	font-size:15px;
@@ -149,6 +151,7 @@ margin:auto;}
 .right{
 	float:right;
 	top:100;
+	
 }
 .right tr{
 	padding:20px;

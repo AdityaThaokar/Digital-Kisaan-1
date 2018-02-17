@@ -46,7 +46,7 @@
                 if($values["product_id"] == $_POST["product_id"])  
                 {  
                      unset($_SESSION["shopping_cart"][$keys]);  
-                     $message = '<label class="text-success">Product Removed</label>';  
+                  //   $message = '<label class="text-success">Product Removed</label>';  
                 }  
            }  
       }  

@@ -130,7 +130,9 @@ function googleTranslateElementInit() {
 	Carrot:₹ 11Kg / Pcs<br></p>
 	 </div>
 	 </div>
-	 <div class="right" style="background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;width: 80%;display: flex-wrap:wrap;padding-bottom: 1%;">
+	 <div class="right" style="overflow-y: scroll;
+  overflow-x:hidden;
+  height:80%;background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;width: 80%;display: flex-wrap:wrap;padding-bottom: 1%;">
 	 	<div id="Items">
 	 		<?php
 	 		$query = "SELECT * FROM items ORDER BY name ASC";
@@ -187,7 +189,7 @@ function googleTranslateElementInit() {
                                          <td></td>  
                                     </tr>  
                                     <tr>  
-                                         <td colspan="5" align="center">  
+                                        <td colspan="5" align="center">  
                                               <form method="post" action="cart.php">  
                                                    <input type="submit" name="place_order" class="btn btn-warning" value="Place Order" />  
                                               </form>  
@@ -214,18 +216,18 @@ function googleTranslateElementInit() {
 <script>  
  $(document).ready(function(data){  
 
- 		 $("switch").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        window.location.hash = hash;
-      });
-    }
+ $.fn.scrollView = function () {
+  return this.each(function () {
+    $('html, body').animate({
+      scrollTop: $(this).offset().top
+    }, 1000);
   });
-
+}
+$('.switch').click(function (event) {
+  event.preventDefault();
+  $('.Contact1').scrollView();
+});
+  
       $('.add_to_cart').click(function(){  
            var product_id = $(this).attr("id");  
            var product_name = $('#name'+product_id).val();  
