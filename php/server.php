@@ -96,7 +96,7 @@ session_start();
 			$arr=mysqli_fetch_array($results);
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['email'] = $email;
-				$_SESSION['id'] = $arr['farmerid'];;
+				$_SESSION['id'] = $arr['farmerid'];
 				$_SESSION['location'] = $arr['location'];
 				$_SESSION['username'] = $arr['username'];
 				header('location: main.php');
@@ -123,6 +123,8 @@ session_start();
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['email'] = $emailw;
 				$_SESSION['location'] = $arr['location'];
+				$_SESSION['id'] = $arr['id'];
+				$_SESSION['username'] = $arr['username'];
 				header('location: wprofile.php');
 			}else {	
 				array_push($errors, "Wrong username/password combination");
