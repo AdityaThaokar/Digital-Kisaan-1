@@ -4,7 +4,7 @@ include('server.php');
 <html>
 <head><link rel="stylesheet" type="text/css" href="../css/about.css">
 <link rel="stylesheet" type="text/css" href="../css/login.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
 <title>About</title>
 </head>
@@ -20,11 +20,11 @@ function googleTranslateElementInit() {
 }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- <ul> 
-   <li><a href="index.php">Home</a></li>
-  <li><a href="About.php">About</a></li>
-   <li><a href="contact.php">Contact</a></li>
-  <li ><a href="current.php">Weather</a></li>
+ <ul style="margin-left:900px;"> 
+   <li><a href="index.php"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+  <li><a href="About.php"><i class="fa fa-info-circle"></i>&nbsp;About</a></li>
+   <li><a href="contact.php"><i class="fa fa-phone"></i>&nbsp;Contact</a></li>
+  <li><a href="current.php"><i class="fa fa-cloud"></i>&nbsp;Weather</a></li>
  </div> 
  <div class="About">
 <p>Contact</p>
