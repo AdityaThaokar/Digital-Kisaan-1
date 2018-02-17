@@ -1,6 +1,6 @@
-<?php
-include('server.php');
-if(isset($_POST["pid"]))  
+<?php  
+ include('server.php');
+ if(isset($_POST["product_id"]))  
  {  
       $order_table = '';  
       $message = '';  
@@ -11,19 +11,19 @@ if(isset($_POST["pid"]))
                 $is_available = 0;  
                 foreach($_SESSION["shopping_cart"] as $keys => $values)  
                 {  
-                     if($_SESSION["shopping_cart"][$keys]['pid'] == $_POST["pid"])  
+                     if($_SESSION["shopping_cart"][$keys]['product_id'] == $_POST["product_id"])  
                      {  
                           $is_available++;  
-                          $_SESSION["shopping_cart"][$keys]['pquantity'] = $_SESSION["shopping_cart"][$keys]['pquantity'] + $_POST["pquantity"];  
+                          $_SESSION["shopping_cart"][$keys]['product_quantity'] = $_SESSION["shopping_cart"][$keys]['product_quantity'] + $_POST["product_quantity"];  
                      }  
                 }  
                 if($is_available < 1)  
                 {  
                      $item_array = array(  
-                          'pid'               =>     $_POST["pid"],  
-                          'pname'               =>     $_POST["pname"],  
-                          'pprice'               =>     $_POST["pprice"],  
-                          'pquantity'          =>     $_POST["pquantity"]  
+                          'product_id'               =>     $_POST["product_id"],  
+                          'product_name'               =>     $_POST["product_name"],  
+                          'product_price'               =>     $_POST["product_price"],  
+                          'product_quantity'          =>     $_POST["product_quantity"]  
                      );  
                      $_SESSION["shopping_cart"][] = $item_array;  
                 }  
@@ -31,10 +31,10 @@ if(isset($_POST["pid"]))
            else  
            {  
                 $item_array = array(  
-                     	  'pid'               =>     $_POST["pid"],  
-                          'pname'               =>     $_POST["pname"],  
-                          'pprice'               =>     $_POST["pprice"],  
-                          'pquantity'          =>     $_POST["pquantity"]  
+                     'product_id'               =>     $_POST["product_id"],  
+                     'product_name'               =>     $_POST["product_name"],  
+                     'product_price'               =>     $_POST["product_price"],  
+                     'product_quantity'          =>     $_POST["product_quantity"]  
                 );  
                 $_SESSION["shopping_cart"][] = $item_array;  
            }  
@@ -43,7 +43,7 @@ if(isset($_POST["pid"]))
       {  
            foreach($_SESSION["shopping_cart"] as $keys => $values)  
            {  
-                if($values["pid"] == $_POST["pid"])  
+                if($values["product_id"] == $_POST["product_id"])  
                 {  
                      unset($_SESSION["shopping_cart"][$keys]);  
                      $message = '<label class="text-success">Product Removed</label>';  
@@ -54,9 +54,9 @@ if(isset($_POST["pid"]))
       {  
            foreach($_SESSION["shopping_cart"] as $keys => $values)  
            {  
-                if($_SESSION["shopping_cart"][$keys]['pid'] == $_POST["pid"])  
+                if($_SESSION["shopping_cart"][$keys]['product_id'] == $_POST["product_id"])  
                 {  
-                     $_SESSION["shopping_cart"][$keys]['pquantity'] = $_POST["pquantity"];  
+                     $_SESSION["shopping_cart"][$keys]['product_quantity'] = $_POST["quantity"];  
                 }  
            }  
       }  
@@ -78,19 +78,19 @@ if(isset($_POST["pid"]))
            {  
                 $order_table .= '  
                      <tr>  
-                          <td>'.$values["pname"].'</td>  
-                          <td><input type="text" name="quantity[]" id="quantity'.$values["pid"].'" value="'.$values["pquantity"].'" class="form-control quantity" data-product_id="'.$values["pid"].'" /></td>  
-                          <td align="right">$ '.$values["pprice"].'</td>  
-                          <td align="right">$ '.number_format($values["pquantity"] * $values["pprice"], 2).'</td>  
-                          <td><button name="delete" class="btn btn-danger btn-xs delete" id="'.$values["pid"].'">Remove</button></td>  
+                          <td>'.$values["product_name"].'</td>  
+                          <td><input type="text" name="quantity[]" id="quantity'.$values["product_id"].'" value="'.$values["product_quantity"].'" class="form-control quantity" data-product_id="'.$values["product_id"].'" /></td>  
+                          <td align="right">Rs. '.$values["product_price"].'</td>  
+                          <td align="right">Rs. '.number_format($values["product_quantity"] * $values["product_price"], 2).'</td>  
+                          <td><button name="delete" class="btn btn-danger btn-xs delete" id="'.$values["product_id"].'">Remove</button></td>  
                      </tr>  
                 ';  
-                $total = $total + ($values["pquantity"] * $values["pprice"]);  
+                $total = $total + ($values["product_quantity"] * $values["product_price"]);  
            }  
            $order_table .= '  
                 <tr>  
                      <td colspan="3" align="right">Total</td>  
-                     <td align="right">$ '.number_format($total, 2).'</td>  
+                     <td align="right">Rs. '.number_format($total, 2).'</td>  
                      <td></td>  
                 </tr>  
                 <tr>  
@@ -109,4 +109,4 @@ if(isset($_POST["pid"]))
       );  
       echo json_encode($output);  
  }  
-?>
+ ?>

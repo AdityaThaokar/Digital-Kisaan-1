@@ -17,8 +17,9 @@ else {
 <link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+
 <title>Digital Kisaan</title>
 <style type="text/css">
 	#bck img {
@@ -108,7 +109,7 @@ function googleTranslateElementInit() {
 		<a href="">Organic Stimulant</a>
 		</div>  -->
 		</div></li>
-		 <li><a class="switch"  href="#" onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'"style="background:none;border-radius:2px;border:none;height:22px;margin-left:180px;">
+		 <li><a class="switch"  href="#cart" onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'"style="background:none;border-radius:2px;border:none;height:22px;margin-left:180px;">
 		 <img src="../images/cart.png" width="20" style="border-radius:30%;"/>&nbsp;My cart<span class="badge"><?php if(isset($_SESSION["shopping_cart"])) { echo count($_SESSION["shopping_cart"]); } else { echo '0';}?></span></a></li>
 		 <li ><a onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'"href="#"style="background:none;border-radius:2px;border:none;height:22px;"><img src="../images/Wprofile.jpg" width="20" style="border-radius:30%;"/>&nbsp;Account</a></li>
     </div>
@@ -142,18 +143,18 @@ function googleTranslateElementInit() {
 	 				<img src="<?php echo $row["img"]; ?>" class="img-responsive" align="center"/><br>
 	 				<p class="text-info"><b>Type: </b><?php echo $row["name"]; ?></p>
 	 				<p class="text-info"><b>Owner ID: </b><?php echo $row["owner"]; ?></p>
-	 				<h4 class="text-danger">Rs.<?php echo $row["sprice"]; ?></h4>
-	 				<input type="text" name="quantity" id="quantity<?php echo $row["id"]?>" class="form-control" value="1"/>
-	 				<input type="hidden" name="hname<?php echo $row["id"]?>" value="<?php echo $row["name"]?>"/>
-	 				<input type="hidden" name="hprice<?php echo $row["id"]?>" value="<?php echo $row["sprice"]?>"/>
-	 				 <input type="button" name="addtocart" id="<?php echo $row["id"]; ?>" style="margin-top:5px;width: 97%;" class="addtocart" value="Add to Cart" />
+	 				<h4 class="text-danger">Rs. <?php echo $row["sprice"]; ?></h4>  
+                               <input type="text" name="quantity" id="quantity<?php echo $row["id"]; ?>" class="form-control" value="1" />  
+                               <input type="hidden" name="hidden_name" id="name<?php echo $row["id"]; ?>" value="<?php echo $row["name"]; ?>" />  
+                               <input type="hidden" name="hidden_price" id="price<?php echo $row["id"]; ?>" value="<?php echo $row["sprice"]; ?>" />  
+                               <input type="button" name="add_to_cart" id="<?php echo $row["id"]; ?>" style="margin-top:5px;" class="btn btn-warning form-control add_to_cart" value="Add to Cart" />  
 	 			</div>
 	 		</div>
 	 		<?php } ?>
 	 	</div>
-
-	 	<div id="cart">  
-                          <div class="table-responsive" id="order_table">  
+	 	</div>
+	 	<div id="cart" style="margin-bottom: 2%;">  
+                          <div id="order_table">  
                                <table class="table table-bordered">  
                                     <tr>  
                                          <th width="40%">Product Name</th>  
@@ -170,19 +171,19 @@ function googleTranslateElementInit() {
                                          {                                               
                                     ?>  
                                     <tr>  
-                                         <td><?php echo $values["pname"]; ?></td>  
-                                         <td><input type="text" name="quantity[]" id="quantity<?php echo $values["pid"]; ?>" value="<?php echo $values["pquantity"]; ?>" data-product_id="<?php echo $values["pid"]; ?>" class="form-control quantity" /></td>  
-                                         <td align="right">$ <?php echo $values["pprice"]; ?></td>  
-                                         <td align="right">$ <?php echo number_format($values["pquantity"] * $values["pprice"], 2); ?></td>  
-                                         <td><button name="delete" class="btn btn-danger btn-xs delete" id="<?php echo $values["pid"]; ?>">Remove</button></td>  
+                                         <td><?php echo $values["product_name"]; ?></td>  
+                                         <td><input type="text" name="quantity[]" id="quantity<?php echo $values["product_id"]; ?>" value="<?php echo $values["product_quantity"]; ?>" data-product_id="<?php echo $values["product_id"]; ?>" class="form-control quantity" /></td>  
+                                         <td align="right">Rs. <?php echo $values["product_price"]; ?></td>  
+                                         <td align="right">Rs. <?php echo number_format($values["product_quantity"] * $values["product_price"], 2); ?></td>  
+                                         <td><button name="delete" class="btn btn-danger btn-xs delete" id="<?php echo $values["product_id"]; ?>">Remove</button></td>  
                                     </tr>  
                                     <?php  
-                                              $total = $total + ($values["pquantity"] * $values["pprice"]);  
+                                              $total = $total + ($values["product_quantity"] * $values["product_price"]);  
                                          }  
                                     ?>  
                                     <tr>  
                                          <td colspan="3" align="right">Total</td>  
-                                         <td align="right">$ <?php echo number_format($total, 2); ?></td>  
+                                         <td align="right">Rs. <?php echo number_format($total, 2); ?></td>  
                                          <td></td>  
                                     </tr>  
                                     <tr>  
@@ -197,10 +198,10 @@ function googleTranslateElementInit() {
                                     ?>  
                                </table>  
                           </div>  
-                     </div>  
-</div>
+                     </div>    
+
  </div>
-<div class="Contact1" id="contact">
+<div class="Contact1" id="contact" style="margin-top: 3%;">
 <p>
 <img src="../images/toll.png" width="30px">Toll Free 1800-274-3131
 <img src="../images/email.png" width="30px">DigitalKisaan@service.com
@@ -210,47 +211,54 @@ function googleTranslateElementInit() {
 </div>
 </div></ul></div></div></ul></div>
 
-<script>
-	$(document).ready(function(data){
+<script>  
+ $(document).ready(function(data){  
 
-		$(".switch").on('click', function() {
-			alert("clicked");
-  		$("#cart").show();
-       $("#Items").hide();
-		});
+ 		 $("switch").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
 
-		$('.addtocart').click(function(){
-			var pid=$(this).attr("id");
-			var pname=$('#hname'+pid).val();
-			var pprice=$('#hprice'+pid).val();
-			var pquantity=$('#quantity'+pid).val();
-			var action="add";
-			if(pquantity>0){
-				$.ajax({
-					url:"action.php",
-					method:"POST",
-					dataType:"json"
-					data:{
-						pid=pid,
-						pname=pname,
-						pprice=pprice,
-						pquantity=pquantity,
-						action=action
-					},
-					success:function(data)
-					{
-						$('#order_table').html(data.order_table);
-						 $('.badge').text(data.cart_item);  
-						 alert("Product has been added to cart");
-					}
-				});
-			}
-			else{
-				alert("Please enter number of items")
-			}
-		});
-
-		$(document).on('click', '.delete', function(){  
+      $('.add_to_cart').click(function(){  
+           var product_id = $(this).attr("id");  
+           var product_name = $('#name'+product_id).val();  
+           var product_price = $('#price'+product_id).val();  
+           var product_quantity = $('#quantity'+product_id).val();  
+           var action = "add";  
+           if(product_quantity > 0)  
+           {  
+                $.ajax({  
+                     url:"action.php",  
+                     method:"POST",  
+                     dataType:"json",  
+                     data:{  
+                          product_id:product_id,   
+                          product_name:product_name,   
+                          product_price:product_price,   
+                          product_quantity:product_quantity,   
+                          action:action  
+                     },  
+                     success:function(data)  
+                     {  
+                          $('#order_table').html(data.order_table);  
+                          $('.badge').text(data.cart_item);  
+                          alert("Product has been Added into Cart");  
+                     }  
+                });  
+           }  
+           else  
+           {  
+                alert("Please Enter Number of Quantity")  
+           }  
+      });  
+      $(document).on('click', '.delete', function(){  
            var product_id = $(this).attr("id");  
            var action = "remove";  
            if(confirm("Are you sure you want to remove this product?"))  
@@ -270,10 +278,26 @@ function googleTranslateElementInit() {
            {  
                 return false;  
            }  
-      }); 
-
-	});
-</script>
+      });  
+      $(document).on('keyup', '.quantity', function(){  
+           var product_id = $(this).data("product_id");  
+           var quantity = $(this).val();  
+           var action = "quantity_change";  
+           if(quantity != '')  
+           {  
+                $.ajax({  
+                     url :"action.php",  
+                     method:"POST",  
+                     dataType:"json",  
+                     data:{product_id:product_id, quantity:quantity, action:action},  
+                     success:function(data){  
+                          $('#order_table').html(data.order_table);  
+                     }  
+                });  
+           }  
+      });  
+ });  
+ </script>
 
 </body></html>
 
