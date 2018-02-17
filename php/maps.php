@@ -5,7 +5,7 @@ $connect = mysqli_connect("localhost", "root", "", "digital_kisan");
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Locate</title>
+    <title>Locate the closest shop</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -33,13 +33,14 @@ $connect = mysqli_connect("localhost", "root", "", "digital_kisan");
      <div class="card-block">
           <input type="button" value="Your Location" onclick="codeAddress()" class="btn btn-success">
           <input type="button" value="Show nearby shops" onclick="showshop()" class="btn btn-success">
+          <input type="button" value="Back" class="btn btn-danger" onclick="location='main.php'">
         </div>
     <script>
       	var map;
 	var geocoder;		
 	function initMap() {
 		var mapLayer = document.getElementById("map");
-		var centerCoordinates = new google.maps.LatLng(37.6, -95.665);
+		var centerCoordinates = new google.maps.LatLng(19.0952,74.7496);
 		var defaultOptions = { center: centerCoordinates, zoom: 4 }
 
 		map = new google.maps.Map(mapLayer, defaultOptions);
@@ -58,7 +59,8 @@ function showshop(){
         var marker = new google.maps.Marker({
             map: map,
             position: results[0].geometry.location,
-            animation: google.maps.Animation.BOUNCE 
+            animation: google.maps.Animation.BOUNCE,
+            title: "<?php echo $values; ?>"
         });
       } else {
         alert('Geocode was not successful for the following reason: ' + status);
@@ -75,7 +77,7 @@ function codeAddress(){
         var marker = new google.maps.Marker({
             map: map,
             position: results[0].geometry.location,
-            animation: google.maps.Animation.BOUNCE,
+            animation: google.maps.Animation.DROP,
             title: "<?php echo $_SESSION['username']; ?>'s Location"
         });
       } else {
