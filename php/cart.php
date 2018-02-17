@@ -66,7 +66,7 @@
                           <p>'.$row["email"].'</p>  
                           <p>'.$row["phone"].'</p>  
                           ';  
-                          $order_details = "  
+                          $order_details .= "  
                                <tr>  
                                     <td>".$row["product_name"]."</td>  
                                     <td>".$row["product_quantity"]."</td>  
@@ -75,7 +75,7 @@
                                </tr>  
                           ";  
                           $total = $total + ($row["product_quantity"] * $row["product_price"]);  
-                     }  
+                     }
                      echo '  
                      <h3 align="center">Order Summary for Order No.'.$_SESSION["order_id"].'</h3>  
                      <div class="table-responsive">  
