@@ -35,16 +35,16 @@ else {
 <body style="background:#e0e1e2;"> 
 <div class="header" style="height:80px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
- <input type="text" placeholder="Search By Type" >
- <input type="submit" value="Search">
+ <input type="text" placeholder="Search By Type"style="width:400px;" >
+ <input type="submit" value="Search" >
  </p>
- <ul style="margin-left:900px;"> 
-   <li><a href="logout.php">Log out</a></li>
-   <li><a href="index.php">Home</a></li>
-  <li><a href="About.php">About</a></li>
-   <li><a href="contact.php">Contact</a></li>
-  <li><a href="current.php">Weather</a></li></div> 
- <marquee behavior=scroll direction="left" scrollamount="5" style="position:relative;background:#e9f6f9">Flat 10% on purchase more than 5500 Rs.
+ <ul style="margin-left:800px;"> 
+   <li><a href="logout.php"><i class="fa fa-sign-out"></i>&nbsp;Log out</a></li>
+ <li><a href="index.php"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+  <li><a href="About.php"><i class="fa fa-info-circle"></i>&nbsp;About</a></li>
+   <li><a href="contact.php"><i class="fa fa-phone"></i>&nbsp;Contact</a></li>
+  <li><a href="current.php"><i class="fa fa-cloud"></i>&nbsp;Weather</a></li></div> 
+ <marquee behavior=scroll direction="left" scrollamount="5" style="position:relative;background:#d3d3d3">Flat 10% on purchase more than 5500 Rs.
 Buy Any products, If your cart value is more than 5500 Rs ,
 you can avail a discount of 10% on your cart value.</marquee>
 
@@ -58,8 +58,8 @@ function googleTranslateElementInit() {
   
  </div> 
  <div class="store" style="background:#e0e1e2;">
- 		 <br>
-    <div class="containr" >
+ 		 
+    <div class="containr" style="background:#4c4c4c;border-radius:0px">
         <ul> 
         <li><div class="butn">
 		<a href="#">Seeds</a>
@@ -111,8 +111,8 @@ function googleTranslateElementInit() {
 		</div>  -->
 		</div></li>
 		 <li><a class="switch"  href="#cart" onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'"style="background:none;border-radius:2px;border:none;height:22px;margin-left:180px;">
-		 <img src="../images/cart.png" width="20" style="border-radius:30%;"/>&nbsp;My cart<span class="badge"><?php if(isset($_SESSION["shopping_cart"])) { echo count($_SESSION["shopping_cart"]); } else { echo '0';}?></span></a></li>
-		 <li ><a onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'" href="http://localhost/Digital-Kisaan/php/fprofile.php" style="background:none;border-radius:2px;border:none;height:22px;"><img src="../images/Wprofile.jpg" width="20" style="border-radius:30%;"/>&nbsp;<?php echo ucfirst($_SESSION["username"]); ?></a></li>
+		 <i class="fa fa-shopping-cart"></i>&nbsp;My cart&nbsp;<span class="badge"><?php if(isset($_SESSION["shopping_cart"])) { echo count($_SESSION["shopping_cart"]); } else { echo '0';}?></span></a></li>
+		 <li ><a onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'" href="http://localhost/Digital-Kisaan/php/fprofile.php" style="background:none;border-radius:2px;border:none;height:22px;"><i class="fa fa-address-book"></i>&nbsp;<?php echo ucfirst($_SESSION["username"]); ?></a></li>
     </div>
 	 <div class="frames" style="background:#f4f5f7;border-style:solid;border-width:1px;border-color:#e5e5e5;">
 	 <div class="left" style="background:#e8e9ea;border-style:solid;border-width:1px;border-color:#edf2f4">
@@ -142,15 +142,15 @@ function googleTranslateElementInit() {
 	 		{
 	 		?>
 	 		<div class="col-md-4" style="margin-top:12px; ">
-	 			<div id="bck" style="border: 1px solid #333;background-color:#f1f1f1;border-radius: 5px;padding: 3%;">
-	 				<img src="<?php echo $row["img"]; ?>" class="img-responsive" align="center"/><br>
+	 			<div id="bck" style="border: 1px solid #d6d7d8;background-color:#f1f1f1;border-radius: 3px;padding: 3%;">
+	 				<img src="<?php echo $row["img"]; ?>" class="img-responsive" style="width:70%;"align="center"/><br>
 	 				<p class="text-info"><b>Type: </b><?php echo $row["name"]; ?></p>
 	 				<p class="text-info"><b>Owner ID: </b><?php echo $row["owner"]; ?></p>
 	 				<h4 class="text-danger">Rs. <?php echo $row["sprice"]; ?></h4>  
                                <input type="text" name="quantity" id="quantity<?php echo $row["id"]; ?>" class="form-control" value="1" />  
                                <input type="hidden" name="hidden_name" id="name<?php echo $row["id"]; ?>" value="<?php echo $row["name"]; ?>" />  
                                <input type="hidden" name="hidden_price" id="price<?php echo $row["id"]; ?>" value="<?php echo $row["sprice"]; ?>" />  
-                               <input type="button" name="add_to_cart" id="<?php echo $row["id"]; ?>" style="margin-top:5px;" class="btn btn-warning form-control add_to_cart" value="Add to Cart" />  
+                               <input type="button" name="add_to_cart" id="<?php echo $row["id"]; ?>" style="margin-top:5px;height:auto;" class="btn btn-warning form-control add_to_cart" value="Add to Cart" />  
 	 			</div>
 	 		</div>
 	 		<?php } ?>
