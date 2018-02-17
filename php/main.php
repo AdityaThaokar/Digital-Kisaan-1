@@ -12,15 +12,14 @@ else {
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../css/main.css">
-<link rel="stylesheet" type="text/css" href="../css/login.css">
 <link rel="stylesheet" type="text/css" href="../css/index.css">
 <link rel="stylesheet" type="text/css" href="../css/search.css">
 <link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <title>Digital Kisaan</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
 	#bck img {
 	margin-left: auto;
@@ -62,18 +61,18 @@ function googleTranslateElementInit() {
         <ul> 
         <li><div class="butn">
 		<a href="#">Seeds</a>
-		<div class="dd">
+	<!--	<div class="dd">
 		<a href="">Ajinkya Seeds</a>
 		<a href="">Ankur Seeds </a>
 		<a href="">Balaji Seed</a>
 		<a href="">Bhadra Hybrid Seeds Co</a>
 		<a href="">Burdwan Seed Production Co-op.Society Ltd.</a>
 		</div>
-		</div>
+		</div> -->
 		</li>
          <li><div class="butn">
 		<a href="#">Pesticides</a>
-		<div class="dd">
+	<!--	<div class="dd">
 		<a href="">Sulphur (fungicide)</a>
 		<a href="">Endosulfan (insecticide)</a>
 		<a href="">Mancozeb (fungicide)</a>
@@ -82,34 +81,34 @@ function googleTranslateElementInit() {
 		<a href="">Chlorpyrifos (insecticide)</a>
 		<a href="">Carbendazim (fungicide)</a>
 		<a href="">Dichlorvos (insecticide)</a>
-		</div>
+		</div> -->
 		</div></li>
          <li><div class="butn">
 		<a href="#">Micronutrients</a>
-		<div class="dd">
+	<!--	<div class="dd">
 		<a href="">Individual Micronutrients</a>
 		<a href="">Micronutrient Mixture</a>
 		<a href="">Micronutrients Spray</a>
-		</div>
+		</div> -->
 		</div></li>
          <li><div class="butn">
 		<a href="#">Fertlizers</a>
-		<div class="dd">
+	<!--	<div class="dd">
 		<a href="">Waterbsoluble fertilizers</a>
 		<a href="">Secondary Fertilizers</a>
-		</div>
+		</div> -->
 		</div></li>
          <li ><div class="butn">
 		<a href="#">Organic products</a>
-		<div class="dd">
+	<!--	<div class="dd">
 		<a href="">Organic couted granuels</a>
 		<a href="">Organic neem product</a>
 		<a href="">Organic PGR technical product</a>
 		<a href="">Organic Premium PGR product</a>
 		<a href="">Organic Stimulant</a>
-		</div>
+		</div>  -->
 		</div></li>
-		 <li><a class="tab"  href="#" onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'"style="background:none;border-radius:2px;border:none;height:22px;margin-left:180px;">
+		 <li><a class="switch"  href="#" onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'"style="background:none;border-radius:2px;border:none;height:22px;margin-left:180px;">
 		 <img src="../images/cart.png" width="20" style="border-radius:30%;"/>&nbsp;My cart<span class="badge"><?php if(isset($_SESSION["shopping_cart"])) { echo count($_SESSION["shopping_cart"]); } else { echo '0';}?></span></a></li>
 		 <li ><a onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'"href="#"style="background:none;border-radius:2px;border:none;height:22px;"><img src="../images/Wprofile.jpg" width="20" style="border-radius:30%;"/>&nbsp;Account</a></li>
     </div>
@@ -130,7 +129,7 @@ function googleTranslateElementInit() {
 	Carrot:₹ 11Kg / Pcs<br></p>
 	 </div>
 	 </div>
-	 <div class="right" style="background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;width: 80%;display: flex-wrap:wrap;">
+	 <div class="right" style="background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;width: 80%;display: flex-wrap:wrap;padding-bottom: 1%;">
 	 	<div id="Items">
 	 		<?php
 	 		$query = "SELECT * FROM items ORDER BY name ASC";
@@ -211,10 +210,11 @@ function googleTranslateElementInit() {
 </div>
 </div></ul></div></div></ul></div>
 
-<script type="text/javascript">
+<script>
 	$(document).ready(function(data){
-		
-		$(".tab").on('click', function() {
+
+		$(".switch").on('click', function() {
+			alert("clicked");
   		$("#cart").show();
        $("#Items").hide();
 		});
