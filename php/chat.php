@@ -5,12 +5,12 @@
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
 	<style>
 
-	<!-- all yours thoa -->
+	<!-- all yours thao -->
 
 	</style>
 </head>
 <body>
-<h2>Chat Room</h2>
+<h2 align="center">Chat Room</h2>
 <hr><center>
 <form action="process.php" id="form" method="post" name="form" style="margin-top: 5%;" >
 <?php
@@ -26,7 +26,7 @@ else {
 	$user_active =$_SESSION['username'];
 	$sqlCommand="select * from chat";
 	$query=mysqli_query($conn, $sqlCommand) or die(mysql_error()) ;
-echo "<div cl>";
+echo "<div>";
 		if($query) {
                 while($row = mysqli_fetch_assoc($query) ) {
       if($row['status']==1){ 
@@ -43,9 +43,9 @@ echo '<td colspan="300px">
 
 echo "</table>";
 ?>
-
+<br><br>
 <textarea id="msg" name="message" placeholder="Message"></textarea>
-<input  type="submit" value="Submit" name="submit" id="submit"  >
+<input  type="submit" value="Submit" name="submit" id="submit" required="">
 </form><br><br>
 <form action="logout.php">
 	<input type="submit" value="Logout" name="submit" id="submit" value="logout" >

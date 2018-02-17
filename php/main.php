@@ -112,7 +112,7 @@ function googleTranslateElementInit() {
 		</div></li>
 		 <li><a class="switch"  href="#cart" onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'"style="background:none;border-radius:2px;border:none;height:22px;margin-left:180px;">
 		 <i class="fa fa-shopping-cart"></i>&nbsp;My cart&nbsp;<span class="badge"><?php if(isset($_SESSION["shopping_cart"])) { echo count($_SESSION["shopping_cart"]); } else { echo '0';}?></span></a></li>
-		 <li ><a onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'" href="http://localhost/Digital-Kisaan/php/fprofile.php" style="background:none;border-radius:2px;border:none;height:22px;"><i class="fa fa-address-book"></i>&nbsp;<?php echo ucfirst($_SESSION["username"]); ?></a></li>
+		 <li ><a onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'" href="../php/fprofile.php" style="background:none;border-radius:2px;border:none;height:22px;"><i class="fa fa-address-book"></i>&nbsp;<?php echo ucfirst($_SESSION["username"]); ?></a></li>
     </div>
 	 <div class="frames" style="background:#f4f5f7;border-style:solid;border-width:1px;border-color:#e5e5e5;">
 	 <div class="left" style="background:#e8e9ea;border-style:solid;border-width:1px;border-color:#edf2f4">
