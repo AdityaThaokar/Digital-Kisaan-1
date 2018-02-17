@@ -111,6 +111,10 @@
                      ';  
                 }  
                 ?>  
+
+                <div class="map_section">
+                  <a href="maps.php" class="btn btn-success" role="button">Locate the sellers on Map</a>
+                  <div>
            </div>  
       </body>  
  </html> 
