@@ -1,5 +1,6 @@
 <?php 
-include('server.php');
+session_start();
+$conn = mysqli_connect("localhost", "root", "", "digital_kisan") or die ("could not connect to mysql");  
 if(isset($_SESSION['email'])){
 	$username = $_SESSION['username'];
 	$location = $_SESSION['location'];
@@ -34,7 +35,7 @@ else {
 <body style="background:#e0e1e2;"> 
 <div class="header" style="height:80px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
- <input type="text" placeholder="Search" >
+ <input type="text" placeholder="Search By Type" >
  <input type="submit" value="Search">
  </p>
  <ul style="margin-left:900px;"> 

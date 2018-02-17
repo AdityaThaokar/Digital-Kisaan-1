@@ -118,8 +118,8 @@ of your home - no more standing in the long queues at ration shops, provision st
                         <div class="row">
                            <div class="col-md-12">
                               <div class="slide-text">
-                                 <div class="slide-title">This is Slide #1</div>
-                                 This is text for the first slide.
+                                 <div class="slide-title">What is Digital Kisaan?</div>
+                                 An online platform for purchase of agricultural inputs.
                               </div>
                            </div>
                         </div>
@@ -130,8 +130,8 @@ of your home - no more standing in the long queues at ration shops, provision st
                         <div class="row">
                            <div class="col-md-12">
                               <div class="slide-text">
-                                 <div class="slide-title">This is Slide #2</div>
-                                 This is text for the second slide.
+                                 <div class="slide-title">Variety</div>
+                                 Large collection of diiferent types of inputs from verified sellers.
                               </div>
                            </div>
                         </div>
@@ -142,8 +142,8 @@ of your home - no more standing in the long queues at ration shops, provision st
                         <div class="row">
                            <div class="col-md-12">
                               <div class="slide-text">
-                                 <div class="slide-title">This is Slide #3</div>
-                                 This is text for the third slide.
+                                 <div class="slide-title">Marketing</div>
+                                 Direct online marketing of perishabe produce of farmer.
                               </div>
                            </div>
                         </div>

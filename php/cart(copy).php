@@ -1,12 +1,11 @@
-<?php  
- //cart.php  
+<?php   
  session_start();  
  $connect = mysqli_connect("localhost", "root", "", "digital_kisan");  
  ?>  
  <!DOCTYPE html>  
  <html>  
       <head>  
-           <title>Order</title>  
+           <title>Order Summary</title>  
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
@@ -14,19 +13,17 @@
       <body>  
            <br />  
            <div class="container" style="width:800px;">  
-
                 <?php  
-
                 if(isset($_POST["place_order"]))  
                 {  
                      $insert_order = "  
-                     INSERT INTO tbl_order(farmerid, creation_date)  
-                     VALUES('1', '".date('Y-m-d')."')  
+                     INSERT INTO tbl_order(creation_date, order_status)  
+                     VALUES('".date('Y-m-d')."', 'pending')  
                      ";  
                      $order_id = "";  
                      if(mysqli_query($connect, $insert_order))  
                      {  
-                          $order_id = mysqli_insert_id($connect) or die(mysql_error());  
+                          $order_id = mysqli_insert_id($connect);  
                      }  
                      $_SESSION["order_id"] = $order_id;  
                      $order_details = "";  
@@ -49,24 +46,24 @@
                      $customer_details = '';  
                      $order_details = '';  
                      $total = 0;  
-                      $query = '  
+                     $query = '  
                      SELECT * FROM tbl_order  
                      INNER JOIN tbl_order_details  
                      ON tbl_order_details.order_id = tbl_order.order_id  
-                     INNER JOIN farmerdetails  
-                     ON farmerdetails.farmerid = tbl_order.farmerid  
+                     INNER JOIN tbl_customer  
+                     ON tbl_customer.CustomerID = tbl_order.customer_id  
                      WHERE tbl_order.order_id = "'.$_SESSION["order_id"].'"  
                      ';  
-                     $result = mysqli_query($connect, $query);   
-                     while($row = mysqli_fetch_array($result) )  
+                     $result = mysqli_query($connect, $query);  
+                     while($row = mysqli_fetch_array($result))  
                      {  
                           $customer_details = '  
-                          <label>'.$row["username"].'</label>  
-                          <p>'.$row["location"].'</p>  
-                          <p>'.$row["email"].'</p>  
-                          <p>'.$row["phone"].'</p>  
+                          <label>'.$row["CustomerName"].'</label>  
+                          <p>'.$row["Address"].'</p>  
+                          <p>'.$row["City"].', '.$row["PostalCode"].'</p>  
+                          <p>'.$row["Country"].'</p>  
                           ';  
-                          $order_details = "  
+                          $order_details .= "  
                                <tr>  
                                     <td>".$row["product_name"]."</td>  
                                     <td>".$row["product_quantity"]."</td>  

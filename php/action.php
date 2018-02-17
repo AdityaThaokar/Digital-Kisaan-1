@@ -1,5 +1,6 @@
 <?php  
- include('server.php');
+ session_start();  
+ $conn = mysqli_connect("localhost", "root", "", "digital_kisan") or die ("could not connect to mysql"); 
  if(isset($_POST["product_id"]))  
  {  
       $order_table = '';  

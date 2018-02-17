@@ -96,6 +96,7 @@ session_start();
 			$arr=mysqli_fetch_array($results);
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['email'] = $email;
+				$_SESSION['id'] = $arr['farmerid'];;
 				$_SESSION['location'] = $arr['location'];
 				$_SESSION['username'] = $arr['username'];
 				header('location: main.php');
