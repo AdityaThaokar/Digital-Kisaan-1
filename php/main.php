@@ -19,38 +19,8 @@ else {
 <title>Digital Kisaan</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.2/jquery.flexslider.js"></script>
-<script language="JavaScript">
-$('.flexslider').each(function() {
-    var sliderSettings =  {
-      animation: $(this).attr('data-transition'),
-      selector: ".slides > .slide",
-      controlNav: false,
-      smoothHeight: true,
-      prevText: "",
-      nextText: "",
-      sync: $(this).data('slidernav') || '',
-      start: function(slider) {
-        if (slider.find('[data-slide-bg-stretch=true]').length > 0) {
-          slider.find('[data-slide-bg-stretch=true]').each(function() {
-            if ($(this).data('slide-bg')) {
-              $(this).backstretch($(this).data('slide-bg'));
-              // $(this).data('slide-bg');
-            }
-          });
-        }
-      }
-    };
-      
-    $('html').addClass('has-flexslider');
-    $(this).flexslider(sliderSettings);
-  });
-  $(window).delay(1000).trigger('resize'); //make sure height is right load assets loaded
-}})
-</script>
 <style type="text/css">
 	#bck img {
 	margin-left: auto;
@@ -139,8 +109,8 @@ function googleTranslateElementInit() {
 		<a href="">Organic Stimulant</a>
 		</div>
 		</div></li>
-		 <li><a href="#" onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'"style="background:none;border-radius:2px;border:none;height:22px;margin-left:180px;">
-		 <img src="../images/cart.png" width="20" style="border-radius:30%;"/>&nbsp;My cart(0)</a></li>
+		 <li><a class="tab"  href="#" onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'"style="background:none;border-radius:2px;border:none;height:22px;margin-left:180px;">
+		 <img src="../images/cart.png" width="20" style="border-radius:30%;"/>&nbsp;My cart<span class="badge"><?php if(isset($_SESSION["shopping_cart"])) { echo count($_SESSION["shopping_cart"]); } else { echo '0';}?></span></a></li>
 		 <li ><a onMouseOver="this.style.color='#1eaa83'" onMouseOut="this.style.color='#FFFFFF'"href="#"style="background:none;border-radius:2px;border:none;height:22px;"><img src="../images/Wprofile.jpg" width="20" style="border-radius:30%;"/>&nbsp;Account</a></li>
     </div>
 	 <div class="frames" style="background:#f4f5f7;border-style:solid;border-width:1px;border-color:#e5e5e5;">
@@ -161,8 +131,7 @@ function googleTranslateElementInit() {
 	 </div>
 	 </div>
 	 <div class="right" style="background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;width: 80%;display: flex-wrap:wrap;">
-	 <div class="tab-content" style="display: flex;flex-wrap: wrap;">
-	 	<div id="Items" class="tab-pane fade in active">
+	 	<div id="Items">
 	 		<?php
 	 		$query = "SELECT * FROM items ORDER BY name ASC";
 	 		$result = mysqli_query($conn,$query);
@@ -170,34 +139,67 @@ function googleTranslateElementInit() {
 	 		{
 	 		?>
 	 		<div class="col-md-4" style="margin-top:12px; ">
-	 			<div id="bck" style="border: 1px solid #333;background-color:#f1f1f1;border-radius: 5px;">
+	 			<div id="bck" style="border: 1px solid #333;background-color:#f1f1f1;border-radius: 5px;padding: 3%;">
 	 				<img src="<?php echo $row["img"]; ?>" class="img-responsive" align="center"/><br>
-	 				<h4 class="text-info"><?php echo $row["name"]; ?></h4>
+	 				<p class="text-info"><b>Type: </b><?php echo $row["name"]; ?></p>
+	 				<p class="text-info"><b>Owner ID: </b><?php echo $row["owner"]; ?></p>
 	 				<h4 class="text-danger">Rs.<?php echo $row["sprice"]; ?></h4>
+	 				<input type="text" name="quantity" id="quantity<?php echo $row["id"]?>" class="form-control" value="1"/>
+	 				<input type="hidden" name="hname<?php echo $row["id"]?>" value="<?php echo $row["name"]?>"/>
+	 				<input type="hidden" name="hprice<?php echo $row["id"]?>" value="<?php echo $row["sprice"]?>"/>
+	 				 <input type="button" name="addtocart" id="<?php echo $row["id"]; ?>" style="margin-top:5px;width: 97%;" class="addtocart" value="Add to Cart" />
 	 			</div>
 	 		</div>
 	 		<?php } ?>
 	 	</div>
-	 	
-	 </div>
-</div>
 
- <!--div class="right" style="background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;">
-    <table style="clear: both; border-collapse: collapse; border-spacing: 0; width: 100%;" >
-	<tr>
-	<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Brown_Flax_Seeds.jpg/1200px-Brown_Flax_Seeds.jpg" width="300px"><p>Name<br>Price:<br><input type="button" value="Add to cart" ><input type="button" value="Buy now" ></td>
-	<td><img src="https://zapmill.com/content/uploads/2016/07/cache/food-4509_1920_best_fit-600x600.jpg" width="300px"><p>Name<br>Price:<br><input type="button" value="Add to cart" ><input type="button" value="Buy now" ></td>
-	<td><img src="http://www.chabad.org/media/images/79813.jpg" width="300px"><p>Name<br>Price:<br><input type="button" value="Add to cart" ><input type="button" value="Buy now" ></td>
-	<tr>
-	<td><img src="https://content.indiainfoline.com/_media/iifl/img/misc/2015-04/20/full/rcf-rashtriya-chemicals-fertilizers-1429520783-8383300.jpg" width="300px"><p>Name<br>Price:<br><input type="button" value="Add to cart" ><input type="button" value="Buy now" ></td>
-	<td><img src="http://roccofischettinursery.com/images/Items/fertilizer.JPG" width="300px"><p>Name<br>Price:<br><input type="button" value="Add to cart" ><input type="button" value="Buy now" ></td>
-	<td><img src="http://knnindia.co.in/uploads/newsfiles/Fertilizers-1-7-17.png" width="300px"><p>Name<br>Price:<br><input type="button" value="Add to cart" ><input type="button" value="Buy now" ></td>
-	<tr>
-	<td><img src="http://bycgroup.com/images/product_catalog/pictures/Bayer%20Pesticide%20Bottle%20100ml%20250ml%20500ml_3.JPG" width="300px"><p>Name<br>Price:<br><input type="button" value="Add to cart" ><input type="button" value="Buy now" ></td>
-	<td><img src="https://cdn.sribu.com/assets/media/contest_detail/2012/11/label-for-pesticides-50b5876c3c0aa1703d000148/bf4252290f.jpg" width="300px"><p>Name<br>Price:<br><input type="button" value="Add to cart" ><input type="button" value="Buy now" ></td>
-	<td><img src="http://www.twentyfournews.com/wp-content/uploads/2016/06/image2.png" width="300px"><p>Name<br>Price:<br><input type="button" value="Add to cart" ><input type="button" value="Buy now" ></td>
-	</table>
- </div>  -->
+	 	<div id="cart">  
+                          <div class="table-responsive" id="order_table">  
+                               <table class="table table-bordered">  
+                                    <tr>  
+                                         <th width="40%">Product Name</th>  
+                                         <th width="10%">Quantity</th>  
+                                         <th width="20%">Price</th>  
+                                         <th width="15%">Total</th>  
+                                         <th width="5%">Action</th>  
+                                    </tr>  
+                                    <?php  
+                                    if(!empty($_SESSION["shopping_cart"]))  
+                                    {  
+                                         $total = 0;  
+                                         foreach($_SESSION["shopping_cart"] as $keys => $values)  
+                                         {                                               
+                                    ?>  
+                                    <tr>  
+                                         <td><?php echo $values["pname"]; ?></td>  
+                                         <td><input type="text" name="quantity[]" id="quantity<?php echo $values["pid"]; ?>" value="<?php echo $values["pquantity"]; ?>" data-product_id="<?php echo $values["pid"]; ?>" class="form-control quantity" /></td>  
+                                         <td align="right">$ <?php echo $values["pprice"]; ?></td>  
+                                         <td align="right">$ <?php echo number_format($values["pquantity"] * $values["pprice"], 2); ?></td>  
+                                         <td><button name="delete" class="btn btn-danger btn-xs delete" id="<?php echo $values["pid"]; ?>">Remove</button></td>  
+                                    </tr>  
+                                    <?php  
+                                              $total = $total + ($values["pquantity"] * $values["pprice"]);  
+                                         }  
+                                    ?>  
+                                    <tr>  
+                                         <td colspan="3" align="right">Total</td>  
+                                         <td align="right">$ <?php echo number_format($total, 2); ?></td>  
+                                         <td></td>  
+                                    </tr>  
+                                    <tr>  
+                                         <td colspan="5" align="center">  
+                                              <form method="post" action="cart.php">  
+                                                   <input type="submit" name="place_order" class="btn btn-warning" value="Place Order" />  
+                                              </form>  
+                                         </td>  
+                                    </tr>  
+                                    <?php  
+                                    }  
+                                    ?>  
+                               </table>  
+                          </div>  
+                     </div>  
+</div>
  </div>
 <div class="Contact1" id="contact">
 <p>
@@ -207,5 +209,71 @@ function googleTranslateElementInit() {
 <br></p>
 <h4>Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
 </div>
-</div>
-</html>
+</div></ul></div></div></ul></div>
+
+<script type="text/javascript">
+	$(document).ready(function(data){
+		
+		$(".tab").on('click', function() {
+  		$("#cart").show();
+       $("#Items").hide();
+		});
+
+		$('.addtocart').click(function(){
+			var pid=$(this).attr("id");
+			var pname=$('#hname'+pid).val();
+			var pprice=$('#hprice'+pid).val();
+			var pquantity=$('#quantity'+pid).val();
+			var action="add";
+			if(pquantity>0){
+				$.ajax({
+					url:"action.php",
+					method:"POST",
+					dataType:"json"
+					data:{
+						pid=pid,
+						pname=pname,
+						pprice=pprice,
+						pquantity=pquantity,
+						action=action
+					},
+					success:function(data)
+					{
+						$('#order_table').html(data.order_table);
+						 $('.badge').text(data.cart_item);  
+						 alert("Product has been added to cart");
+					}
+				});
+			}
+			else{
+				alert("Please enter number of items")
+			}
+		});
+
+		$(document).on('click', '.delete', function(){  
+           var product_id = $(this).attr("id");  
+           var action = "remove";  
+           if(confirm("Are you sure you want to remove this product?"))  
+           {  
+                $.ajax({  
+                     url:"action.php",  
+                     method:"POST",  
+                     dataType:"json",  
+                     data:{product_id:product_id, action:action},  
+                     success:function(data){  
+                          $('#order_table').html(data.order_table);  
+                          $('.badge').text(data.cart_item);  
+                     }  
+                });  
+           }  
+           else  
+           {  
+                return false;  
+           }  
+      }); 
+
+	});
+</script>
+
+</body></html>
+
