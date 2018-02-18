@@ -2,11 +2,15 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 <link rel="stylesheet" type="text/css" href="../css/about.css">
+<link rel="stylesheet" type="text/css" href="../css/index.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
 <title>Privacy Policy</title>
 </head>
 <body> 
+<div style="background: linear-gradient(rgba(26,26,26,0.2),rgba(26,26,26,0.7)), url('../images/background9.jpg');
+background-size:cover;
+background-attachment: fixed;	">
 <div class="header" style="height:100px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
  <div id="google_translate_element" style="margin-left:1170px;"></div>
@@ -47,5 +51,13 @@ and which fields are optional. You always have the option to not provide informa
  is on our Website or not), which URL you next go to (whether this URL is on our Website or not), your computer browser information, and your IP address.
 </h5>
  </div>
- <h4>Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
+  <div class="Contact" id="contact1">
+<p style="color:white;">
+<img src="../images/toll.png" width="0px"><i class="fa fa-phone"></i>&nbsp;Toll Free 1800-274-3131
+<img src="../images/email.png" width="0px"><i class="fa fa-envelope"></i>&nbsp;DigitalKisaan@service.com
+<img src="../images/franchize.png" width="0px"><i class="fa fa-handshake-o"></i>&nbsp;Franchise
+</p>
+<h4 >Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
+</div></body>
+ </div> </div>
 </html>

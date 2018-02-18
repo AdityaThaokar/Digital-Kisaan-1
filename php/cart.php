@@ -10,10 +10,45 @@
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+		   <link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
+		<link rel="stylesheet" type="text/css" href="../css/wprofile.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+		.container h3{
+			color:grey;
+		}
+		</style>
+        <script type="text/javascript" src="autocomplete.js"></script>
       </head>  
       <body>  
-           <br />  
-           <div class="container" style="width:800px;">  
+	  <div class="header" style="height:100px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
+ <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
+ <input type="text" placeholder="Search" style="width:400px;height:30px;">
+ <input type="submit" value="Search">
+ </p>
+ <ul style="margin-left:800px;"> 
+   <li><a href="logout.php"><i class="fa fa-sign-out"></i>&nbsp;Log out</a></li>
+ <li><a href="index.php"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+  <li><a href="About.php"><i class="fa fa-info-circle"></i>&nbsp;About</a></li>
+   <li><a href="contact.php"><i class="fa fa-phone"></i>&nbsp;Contact</a></li>
+  <li><a href="current.php"><i class="fa fa-cloud"></i>&nbsp;Weather</a></li></div> 
+ 
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<div class="bg" style="height:auto;"><div id="google_translate_element" style="margin-left:1170px;"></div>
+            
+           <div class="container" style="width:950px;background:green;overflow-y:scroll;overflow-x:hidden;background:white;
+	border-style: solid;
+	border-radius:10px;
+	border-width:1px;
+	border-color:#e5e5e5;">  
 
                 <?php  
 
@@ -111,10 +146,19 @@
                      ';  
                 }  
                 ?>  
-
+</div> <br>
                 <div class="map_section">
+				<center>
                   <a href="maps.php" class="btn btn-success" role="button">Locate the sellers on Map</a>
                   <div>
-           </div>  
+           </div>  </div> <br><br>
+		   <div class="Contact" id="contact1">
+<p>
+<img src="../images/toll.png" width="30px">Toll Free 1800-274-3131
+<img src="../images/email.png" width="30px">DigitalKisaan@service.com
+<img src="../images/franchize.png" width="30px">Franchise
+</p>
+<h4 align="center">Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
+</div> 
       </body>  
  </html> 

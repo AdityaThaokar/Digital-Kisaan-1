@@ -70,9 +70,9 @@ echo "<h4> Address: ".$arr['location']."</h4>";
 <br><br>
 <div class="Contact" id="contact1">
 <p>
-<img src="../images/toll.png" width="30px">Toll Free 1800-274-3131
-<img src="../images/email.png" width="30px">DigitalKisaan@service.com
-<img src="../images/franchize.png" width="30px">Franchise
+<img src="../images/toll.png" width="0px"><i class="fa fa-phone"></i>&nbsp;Toll Free 1800-274-3131
+<img src="../images/email.png" width="0px"><i class="fa fa-envelope"></i>&nbsp;DigitalKisaan@service.com
+<img src="../images/franchize.png" width="0px"><i class="fa fa-handshake-o"></i>&nbsp;Franchise
 </p>
 <h4 align="center">Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
 </div> </div>

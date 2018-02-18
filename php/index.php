@@ -77,7 +77,9 @@ $(document).ready(function (){
 </script>
 </head> 
 <body>
-
+<div style="background: linear-gradient(rgba(26,26,26,0.2),rgba(26,26,26,0.7)), url('../images/background1.jpg');
+background-size:cover;
+background-attachment: fixed;	">
  <div class="header" style="height:100px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
  <div id="google_translate_element" style="margin-left:1170px;"></div>
@@ -159,13 +161,13 @@ of your home - no more standing in the long queues at ration shops, provision st
 </div>
 <br>
 <div class="Contact" id="contact">
-<p>
-<img src="../images/toll.png" width="30px">Toll Free 1800-274-3131
-<img src="../images/email.png" width="30px">DigitalKisaan@service.com
-<img src="../images/franchize.png" width="30px">Franchise
+<p style="color:white;">
+<img src="../images/toll.png" width="0px"><i class="fa fa-phone"></i>&nbsp;Toll Free 1800-274-3131
+<img src="../images/email.png" width="0px"><i class="fa fa-envelope"></i>&nbsp;DigitalKisaan@service.com
+<img src="../images/franchize.png" width="0px"><i class="fa fa-handshake-o"></i>&nbsp;Franchise
 <br></p>
 <h4>Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
 </div>
-
+</div>
 </div>
 </html>
