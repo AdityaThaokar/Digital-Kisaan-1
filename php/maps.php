@@ -55,11 +55,15 @@ $connect = mysqli_connect("localhost", "root", "", "digital_kisan");
 	border-color:#e5e5e5;height:500px;">
   	<?php
 
-  	$result = "SELECT location FROM salerdetails";
+  	$result = "SELECT * FROM salerdetails";
   	$sel=mysqli_query($connect,$result) or die(mysql_error()); 
 	$storeArray = Array();
+  $phone = Array();
+  $shopid = Array();
 	while ($row = mysqli_fetch_array($sel)) {
-    $storeArray[] =  $row['location'];  
+    $storeArray[] =  $row['location'];
+    $phone[] = $row['phone'];
+    $shopid[] = $row['shopid'];  
 	}
 	echo '<div class="card-block" align="center" style="font-size:20px;"><b>Your Location:</b> '.$_SESSION['location'].'</div>';
   	?>
@@ -101,22 +105,36 @@ $connect = mysqli_connect("localhost", "root", "", "digital_kisan");
 function showshop(){
 	<?php
 	foreach($storeArray as $keys => $values)  
-	{ ?>
+	{ 
+    ?>
 		var address = '<?php echo $values; ?>';
+    var icon = {
+    url: "../images/pin_1-512.png", 
+    scaledSize: new google.maps.Size(50, 50),
+    origin: new google.maps.Point(0,0), 
+    anchor: new google.maps.Point(0, 0) 
+};
 		  geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         map.setCenter(results[0].geometry.location);
         var marker = new google.maps.Marker({
             map: map,
             position: results[0].geometry.location,
-            animation: google.maps.Animation.BOUNCE,
-            title: "<?php echo $values; ?>"
+            animation: google.maps.Animation.DROP,
+            title: "<?php echo $values; ?>",
+            icon:icon
         });
+         var infowindow = new google.maps.InfoWindow({
+         content: "<h2><?php echo $values ?></h2><br><h4><?php echo 'Shop id: '.$shopid[$keys] ?></h4><br><h4><?php echo 'Phone Number. '.$phone[$keys] ?></h4>"
+         });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+});
       } else {
         alert('Geocode was not successful for the following reason: ' + status);
       }
     });
-<?php } ?>
+<?php }  ?>
 }
 
 function codeAddress(){
@@ -127,7 +145,7 @@ function codeAddress(){
         var marker = new google.maps.Marker({
             map: map,
             position: results[0].geometry.location,
-            animation: google.maps.Animation.DROP,
+            animation: google.maps.Animation.BOUNCE,
             title: "<?php echo $_SESSION['username']; ?>'s Location"
         });
       } else {
