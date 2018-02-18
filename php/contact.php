@@ -29,7 +29,7 @@ function googleTranslateElementInit() {
    <li><a href="contact.php"><i class="fa fa-phone"></i>&nbsp;Contact</a></li>
   <li><a href="current.php"><i class="fa fa-cloud"></i>&nbsp;Weather</a></li>
  </div> 
- <div class="About" >
+ <div class="About" style="height:600px;">
 <p>Contact</p>
 <h5>
 <img src="../images/toll.png" width="0px"><i class="fa fa-phone"></i>&nbsp;&nbsp;Toll Free 1800-274-3131<br><br><br>

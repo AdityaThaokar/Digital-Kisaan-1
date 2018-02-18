@@ -9,7 +9,7 @@
 <body> 
 <div style="background: linear-gradient(rgba(26,26,26,0.2),rgba(26,26,26,0.7)), url('../images/background5.jpg');
 background-size:cover;
-background-attachment: fixed;	">
+background-attachment: fixed;">
 <div class="header" style="height:100px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
  <div id="google_translate_element" style="margin-left:1170px;"></div>
@@ -26,7 +26,7 @@ function googleTranslateElementInit() {
    <li><a href="contact.php"><i class="fa fa-phone"></i>&nbsp;Contact</a></li>
   <li><a href="current.php"><i class="fa fa-cloud"></i>&nbsp;Weather</a></li>
  </div> 
- <div class="About">
+ <div class="About" style="height:500px;">
 <p>About</p>
 <h5>The system provides two login options ,one for farmers and the
 another for the wholesaler. All the user details and passwords are

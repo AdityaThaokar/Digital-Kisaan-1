@@ -19,6 +19,9 @@ $connect = mysqli_connect("localhost", "root", "", "digital_kisan");
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <style>
+	body{
+		background:#f4f5f7;
+	}
     #map{
       height: 70%;
     }
@@ -29,7 +32,27 @@ $connect = mysqli_connect("localhost", "root", "", "digital_kisan");
       }
     </style>
   </head>
-  <body onload="initMap()"  >
+  <div class="header" style="height:80px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
+ <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
+ <input type="text" placeholder="Search By Type"style="width:400px;" >
+ <input type="submit" value="Search" >
+ </p>
+ <ul style="margin-left:800px;"> 
+   <li><a href="logout.php"><i class="fa fa-sign-out"></i>&nbsp;Log out</a></li>
+ <li><a href="index.php"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+  <li><a href="About.php"><i class="fa fa-info-circle"></i>&nbsp;About</a></li>
+   <li><a href="contact.php"><i class="fa fa-phone"></i>&nbsp;Contact</a></li>
+  <li><a href="current.php"><i class="fa fa-cloud"></i>&nbsp;Weather</a></li></div> 
+  <body onload="initMap()">
+  <div class="lmap" style="margin-left:auto;
+    margin-right:auto;
+	margin-top:10px;
+	width:1200px;
+	background:white;
+	border-style: solid;
+	border-radius:20px;
+	border-width:1px;
+	border-color:#e5e5e5;height:500px;">
   	<?php
 
   	$result = "SELECT location FROM salerdetails";
@@ -42,13 +65,21 @@ $connect = mysqli_connect("localhost", "root", "", "digital_kisan");
   	?>
 	
     <div id="map" class="card-block" style="margin:0% 5%;"></div>
+	</div>
      <div class="card-block" ><br><center>
           <input type="button" style="font-size:15px;" value="Your Location" onclick="codeAddress()" class="btn btn-success">
           <input type="button" style="font-size:15px;"value="Show nearby shops" onclick="showshop()" class="btn btn-success">
           <input type="button" style="font-size:15px;"value="Back" class="btn btn-danger" onclick="location='main.php'">
         </div>
 		<br>
-	 
+	 <div class="Contact1" id="contact" style="margin-top: 3%;">
+<p style="color:white;font-size:15px">
+<img src="../images/toll.png" width="0px"><i class="fa fa-phone"></i>&nbsp;Toll Free 1800-274-3131
+<img src="../images/email.png" width="0px"><i class="fa fa-envelope"></i>&nbsp;DigitalKisaan@service.com
+<img src="../images/franchize.png" width="0px"><i class="fa fa-handshake-o"></i>&nbsp;Franchise
+<br></p>
+<h4 align="center">Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
+</div>
     <script>
       var map;
 	var geocoder;		

@@ -44,7 +44,7 @@ function googleTranslateElementInit() {
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <div class="bg" style="height:auto;"><div id="google_translate_element" style="margin-left:1170px;"></div>
             
-           <div class="container" style="width:950px;background:green;overflow-y:scroll;overflow-x:hidden;background:white;
+           <div class="container" style="overflow-y:scroll;position:relative;height:500px;width:900px;background:green;background:white;
 	border-style: solid;
 	border-radius:10px;
 	border-width:1px;

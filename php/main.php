@@ -156,7 +156,7 @@ function googleTranslateElementInit() {
 	 		<?php } ?>
 	 	</div>
 	 	</div>
-	 	<div id="cart" style="margin-bottom: 2%;">  
+	 	<div id="cart" style="margin-bottom: 2%;overflow-y:scroll;position:relative;width: 100%;height:20%;">  <br><br>
                           <div id="order_table">  
                                <table class="table table-bordered">  
                                     <tr>  
