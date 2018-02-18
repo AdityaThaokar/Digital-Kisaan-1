@@ -34,27 +34,26 @@
 }
 .sendmsg{
 	padding:10px;
-	top:500px;
+	top:530px;
+	
 	position:absolute;
 	width:375px;
-	margin-left:auto;
+	margin-left:490px;
 	margin-right:auto;	
 	display:inline-block;
 	border-radius:5px;
 	background:#d4d4d6;
 
-}.chats{
+}
+table{
 	padding:10px;
 	width:400px;
 	height:300px;
 	margin-left:auto;
-	margin-right:auto;	
-	background-color:grey;
+	margin-right:auto;
+	margin-top:20px;	
+	color: white;
 	border-radius:5px;
-	overflow-y:scroll;
-	overflow-x:scroll;
-	
-
 }
 h2{
 	color:#919191;
@@ -83,8 +82,7 @@ function googleTranslateElementInit() {
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <div id="google_translate_element" style="margin-left:1170px;"></div>
-<h2   align="center">Chat Room</h2><br>
-<div class="chats">
+<h2   align="center">Chat Room</h2>
 <form action="process.php" id="form" method="post" name="form" style="margin-top: 5%;" >
 <?php
 session_start();
@@ -99,11 +97,11 @@ else {
 	$user_active =$_SESSION['username'];
 	$sqlCommand="select * from chat";
 	$query=mysqli_query($conn, $sqlCommand) or die(mysql_error()) ;
-echo "<div>";
+echo "<div><table style = \"color:white; background: #151719  ;overflow:auto;display:flex;flex-direction:column;\">";
 		if($query) {
                 while($row = mysqli_fetch_assoc($query) ) {
       if($row['status']==1){ 
-			echo '<tr><td><div class="bullet"></div></td>';
+			echo '<tr><td style="color:white;"><div class="bullet" ></div></td>';
 	 } 
 	 else {
 	 	echo '<tr><td><div class="bye"></div></td>';
@@ -116,7 +114,6 @@ echo '<td colspan="300px">
 
 echo "</table>";
 ?>
-</div>
 <br><br>
 <div class="sendmsg" >
 <textarea id="msg" name="message" cols="47" placeholder="Message"></textarea><br><br>

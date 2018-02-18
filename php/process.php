@@ -12,7 +12,7 @@
 	else{
 
 		echo ("<script LANGUAGE='JavaScript'>
-    window.alert('Enter some texr!');
+    window.alert('Enter some text!');
     window.location.href='../php/chat.php';
     </script>");
 	}
