@@ -34,8 +34,6 @@ $connect = mysqli_connect("localhost", "root", "", "digital_kisan");
   </head>
   <div class="header" style="height:80px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
- <input type="text" placeholder="Search By Type"style="width:400px;" >
- <input type="submit" value="Search" >
  </p>
  <ul style="margin-left:800px;"> 
    <li><a href="logout.php"><i class="fa fa-sign-out"></i>&nbsp;Log out</a></li>
@@ -69,7 +67,8 @@ $connect = mysqli_connect("localhost", "root", "", "digital_kisan");
   	?>
 	
     <div id="map" class="card-block" style="margin:0% 5%;"></div>
-	</div>
+    <br><p align="center" style="font-size: 15px;">Green circle shows the area within 20km.</p>
+    	</div>
      <div class="card-block" ><br><center>
           <input type="button" style="font-size:15px;" value="Your Location" onclick="codeAddress()" class="btn btn-success">
           <input type="button" style="font-size:15px;"value="Show nearby shops" onclick="showshop()" class="btn btn-success">
@@ -90,7 +89,7 @@ $connect = mysqli_connect("localhost", "root", "", "digital_kisan");
 	function initMap() {
 		var mapLayer = document.getElementById("map");
 		var centerCoordinates = new google.maps.LatLng(19.0952,74.7496);
-		var defaultOptions = { center: centerCoordinates, zoom: 8 }
+		var defaultOptions = { center: centerCoordinates, zoom: 9 }
 
 		map = new google.maps.Map(mapLayer, defaultOptions);
 		geocoder = new google.maps.Geocoder();
@@ -154,9 +153,9 @@ function codeAddress(){
       }
       var circle = new google.maps.Circle({
       map: map,
-      strokeColor:'#ff0000',
+      strokeColor:'#12AD2A',
       radius: 20000,    // 20 km in metres
-      fillColor: '#AA0000'
+      fillColor: '#12E603'
     });
       circle.bindTo('center', marker, 'position');
     });

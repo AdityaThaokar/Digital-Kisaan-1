@@ -65,8 +65,6 @@ h2{
 <body style="background:#f4f5f7;"> 
 <div class="header" style="height:80px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
- <input type="text" placeholder="Search By Type"style="width:400px;" >
- <input type="submit" value="Search" >
  </p>
  <ul style="margin-left:800px;"> 
    <li><a href="logout.php"><i class="fa fa-sign-out"></i>&nbsp;Log out</a></li>

@@ -25,8 +25,6 @@
       <body>  
 	  <div class="header" style="height:100px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
- <input type="text" placeholder="Search" style="width:400px;height:30px;">
- <input type="submit" value="Search">
  </p>
  <ul style="margin-left:800px;"> 
    <li><a href="logout.php"><i class="fa fa-sign-out"></i>&nbsp;Log out</a></li>
@@ -51,7 +49,8 @@ function googleTranslateElementInit() {
 	border-color:#e5e5e5;">  
 
                 <?php  
-
+                  $subject = "From Digital-Kisaan: Order summary";
+                  $headers = "From:Digital-Kisaan";
                 if(isset($_POST["place_order"]))  
                 {  
                      $insert_order = "  
@@ -74,8 +73,8 @@ function googleTranslateElementInit() {
                      }  
                      if(mysqli_multi_query($connect, $order_details))  
                      {  
-                          unset($_SESSION["shopping_cart"]);  
-                          echo '<script>alert("You have successfully place an order...Thank you")</script>';  
+                          unset($_SESSION["shopping_cart"]); 
+                          echo '<script>alert("You have successfully place an order...Thank you.Bill summary is sent to you via mail. ")</script>';  
                           echo '<script>window.location.href="cart.php"</script>';  
                      }  
                 }  
@@ -141,15 +140,19 @@ function googleTranslateElementInit() {
                                          </table>  
                                     </td>  
                                </tr>  
-                          </table>  
+                          </table>
                      </div>  
                      ';  
                 }  
+                   $message =  $order_details;
+                          mail($_SESSION['email'], $subject, $message, $header);
+
                 ?>  
 </div> <br>
                 <div class="map_section">
 				<center>
                   <a href="maps.php" class="btn btn-success" role="button">Locate the sellers on Map</a>
+                  <a href="buy.php" class="btn btn-success" role="button">Proceed to online payment</a>
                   <div>
            </div>  </div> <br><br>
 		   <div class="Contact" id="contact1">
