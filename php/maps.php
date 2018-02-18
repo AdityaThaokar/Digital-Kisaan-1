@@ -57,13 +57,13 @@ $connect = mysqli_connect("localhost", "root", "", "digital_kisan");
 
   	$result = "SELECT * FROM salerdetails";
   	$sel=mysqli_query($connect,$result) or die(mysql_error()); 
-	$storeArray = Array();
-  $phone = Array();
-  $shopid = Array();
+	$storeArray = Array();$phone = Array();
+  $shopid = Array();$name = Array();
 	while ($row = mysqli_fetch_array($sel)) {
     $storeArray[] =  $row['location'];
     $phone[] = $row['phone'];
     $shopid[] = $row['shopid'];  
+    $name[] = $row['username'];
 	}
 	echo '<div class="card-block" align="center" style="font-size:20px;"><b>Your Location:</b> '.$_SESSION['location'].'</div>';
   	?>
@@ -125,7 +125,7 @@ function showshop(){
             icon:icon
         });
          var infowindow = new google.maps.InfoWindow({
-         content: "<h2><?php echo $values ?></h2><br><h4><?php echo 'Shop id: '.$shopid[$keys] ?></h4><br><h4><?php echo 'Phone Number. '.$phone[$keys] ?></h4>"
+         content: "<h2><?php echo $values ?></h2><br><h4><?php echo 'Owner: '.$name[$keys] ?></h4><br><h4><?php echo 'Shop id: '.$shopid[$keys] ?></h4><br><h4><?php echo 'Phone Number. '.$phone[$keys] ?></h4>"
          });
         marker.addListener('click', function() {
           infowindow.open(map, marker);
@@ -139,6 +139,7 @@ function showshop(){
 
 function codeAddress(){
 	 var address = '<?php echo $_SESSION['location']; ?>';
+
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         map.setCenter(results[0].geometry.location);
@@ -151,6 +152,13 @@ function codeAddress(){
       } else {
         alert('Geocode was not successful for the following reason: ' + status);
       }
+      var circle = new google.maps.Circle({
+      map: map,
+      strokeColor:'#ff0000',
+      radius: 20000,    // 20 km in metres
+      fillColor: '#AA0000'
+    });
+      circle.bindTo('center', marker, 'position');
     });
 
 }	
