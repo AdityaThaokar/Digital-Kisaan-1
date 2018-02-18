@@ -19,39 +19,17 @@ $connect = mysqli_connect("localhost", "root", "", "digital_kisan");
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <style>
-     #map{
-		 height:70%;
-	 }
+    #map{
+      height: 70%;
+    }
+   html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
     </style>
   </head>
   <body onload="initMap()"  >
-  
-  <div class="header" style="height:100px;width:100%;box-shadow: 1px 2px 4px 0px #4e4e4f;"> 
- <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
- <input type="text" placeholder="Search" style="width:400px;height:30px;">
- <input type="submit" value="Search">
- </p>
- <ul style="margin-left:800px;"> 
-   <li><a href="logout.php"><i class="fa fa-sign-out"></i>&nbsp;Log out</a></li>
- <li><a href="index.php"><i class="fa fa-home"></i>&nbsp;Home</a></li>
-  <li><a href="About.php"><i class="fa fa-info-circle"></i>&nbsp;About</a></li>
-   <li><a href="contact.php"><i class="fa fa-phone"></i>&nbsp;Contact</a></li>
-  <li><a href="current.php"><i class="fa fa-cloud"></i>&nbsp;Weather</a></li></div> 
- 
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<div class="bg" style="height:auto;"><div id="google_translate_element" style="margin-left:1170px;"></div>
-            
-<div class="container" style="width:900px;background:white;
-	border-style: solid;
-	border-radius:10px;
-	border-width:1px;
-	border-color:#e5e5e5;font-size:15px;height:500px;">  
   	<?php
 
   	$result = "SELECT location FROM salerdetails";
@@ -60,34 +38,32 @@ function googleTranslateElementInit() {
 	while ($row = mysqli_fetch_array($sel)) {
     $storeArray[] =  $row['location'];  
 	}
-	echo '<div class="card-block" align="center">Your Location: '.$_SESSION['location'].'</div>';
+	echo '<div class="card-block" align="center" style="font-size:20px;"><b>Your Location:</b> '.$_SESSION['location'].'</div>';
   	?>
 	
-    <div id="map" class="card-block"></div>
+    <div id="map" class="card-block" style="margin:0% 5%;"></div>
      <div class="card-block" ><br><center>
           <input type="button" style="font-size:15px;" value="Your Location" onclick="codeAddress()" class="btn btn-success">
           <input type="button" style="font-size:15px;"value="Show nearby shops" onclick="showshop()" class="btn btn-success">
           <input type="button" style="font-size:15px;"value="Back" class="btn btn-danger" onclick="location='main.php'">
         </div>
-		</div><br>
-		<div class="Contact" id="contact1">
-<p style="font-size:15px;color:white;">
-<img src="../images/toll.png" width="0px"><i class="fa fa-phone"></i>&nbsp;Toll Free 1800-274-3131
-<img src="../images/email.png" width="0px"><i class="fa fa-envelope"></i>&nbsp;DigitalKisaan@service.com
-<img src="../images/franchize.png" width="0px"><i class="fa fa-handshake-o"></i>&nbsp;Franchise
-</p>
-<h4 align="center">Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
-</div> 
+		<br>
+	 
     <script>
-      	var map;
+      var map;
 	var geocoder;		
 	function initMap() {
 		var mapLayer = document.getElementById("map");
 		var centerCoordinates = new google.maps.LatLng(19.0952,74.7496);
-		var defaultOptions = { center: centerCoordinates, zoom: 4, }
+		var defaultOptions = { center: centerCoordinates, zoom: 8 }
 
 		map = new google.maps.Map(mapLayer, defaultOptions);
 		geocoder = new google.maps.Geocoder();
+
+      google.maps.event.addEventListener(map, "load", function(){
+        google.maps.event.trigger(map, 'resize'); 
+        map.setZoom( map.getZoom() );
+    });
 		
 }
 
