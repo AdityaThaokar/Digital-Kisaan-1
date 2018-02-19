@@ -159,7 +159,7 @@ of your home - no more standing in the long queues at ration shops, provision st
       </div>
    </div>
 </div>
-<br>
+<br><br><br><br><br><br><br><br><br><br>
 <div class="Contact" id="contact">
 <p style="color:white;">
 <img src="../images/toll.png" width="0px"><i class="fa fa-phone"></i>&nbsp;Toll Free 1800-274-3131

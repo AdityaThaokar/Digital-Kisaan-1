@@ -52,7 +52,7 @@ function googleTranslateElementInit() {
      <p style="font-size:15px;">New user ? Click <a href="./SellerSignup.php">here</a> to create an account</p>    
    </div>	 	 
   </div>  
- </div><br><br><br>
+ </div><br><br><br><br><br><br><br><br><br>
  <div class="Contact" id="contact1">
 <p style="color:white;">
 <img src="../images/toll.png" width="0px"><i class="fa fa-phone"></i>&nbsp;Toll Free 1800-274-3131

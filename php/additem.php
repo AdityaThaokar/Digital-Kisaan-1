@@ -62,11 +62,11 @@ function googleTranslateElementInit() {
                         </tr>
                         <tr>
                             <td align="right"><label for="sprice">Start Price( per kg )</label></td><td>:</td>
-                            <td><input type="text" placeholder="Eg.10"id="sprice" name="sprice" required></td>
+                            <td><input type="text" style="border-width: thin;border-style:solid ;border-color:grey;" placeholder="Eg.10"id="sprice" name="sprice" required></td>
                         </tr> 
                         <tr>
                             <td align="right"><label for="quantity">Quantity( in kgs )</label></td><td>:</td>
-                            <td><input type="text" placeholder="Eg.20" id="quantity" name="quantity" required></td>
+                            <td><input type="text" style="border-width: thin;border-style:solid ;border-color:grey;"placeholder="Eg.20" id="quantity" name="quantity" required></td>
                         </tr> 
                         <tr>
                             <td align="right"><label for="mdate">Manufacturing Date</label></td><td>:</td>
@@ -114,7 +114,7 @@ function googleTranslateElementInit() {
                         </tr>
                         <tr>
                                 <td align="right"><label for="address">Address</label></td><td>:</td>
-                                <td><input type="text" id="location" name="location"></td>
+                                <td><input type="text" style="border-style:solid ;border-color:grey;border-width: thin;" id="location" name="location"></td>
                             </tr>
                         <tr>
                             <td align="right"><label for="payoptions">Payment Options</label></td><td>:</td>
@@ -136,14 +136,14 @@ function googleTranslateElementInit() {
          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeMQgP036S3bA1yPmzGABcVN-COuYIHLc&libraries=places&callback=initAutocomplete" async defer></script>
 	</div>
 	</div>
-	<div class="Contact" id="contact">
-<p>
-<img src="../images/toll.png" width="30px">Toll Free 1800-274-3131
-<img src="../images/email.png" width="30px">DigitalKisaan@service.com
-<img src="../images/franchize.png" width="30px">Franchise
-<br></p>
+	<div class="Contact" id="contact1">
+<p style="color:white;">
+<img src="../images/toll.png" width="0px"><i class="fa fa-phone"></i>&nbsp;Toll Free 1800-274-3131
+<img src="../images/email.png" width="0px"><i class="fa fa-envelope"></i>&nbsp;DigitalKisaan@service.com
+<img src="../images/franchize.png" width="0px"><i class="fa fa-handshake-o"></i>&nbsp;Franchise
+</p>
 <h4 align="center">Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
-</div>
+</div> 
 	</body>
 
 </html>

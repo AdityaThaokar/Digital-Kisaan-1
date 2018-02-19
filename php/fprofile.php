@@ -63,7 +63,7 @@ echo "<h4> Address: ".$arr['location']."</h4>";
 <div style="display:flex;flex-direction: column;flex-grow: 1; justify-content: space-around;margin-top: 2%;">
 <form id="form" action="chat.php"><input  type="submit" value="Chat Room" ></form></div>
 </div>
-<br><br>
+<br><br><br><br><br>
 <div class="Contact" id="contact1">
 <p style="color:white;">
 <img src="../images/toll.png" width="0px"><i class="fa fa-phone"></i>&nbsp;Toll Free 1800-274-3131

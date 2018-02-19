@@ -83,7 +83,7 @@ function googleTranslateElementInit() {
    <div class="footr">
      <p>Already have account ? Click <a href="./login.php">here</a> to login</p>    
   </div>
- </div> <br><br>
+ </div> <br><br><br><br><br>
 
  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeMQgP036S3bA1yPmzGABcVN-COuYIHLc&libraries=places&callback=initAutocomplete" async defer></script>
 
