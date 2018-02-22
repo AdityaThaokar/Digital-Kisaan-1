@@ -62,8 +62,6 @@ echo "<h4> Address: ".$arr['location']."</h4>";
 </div>
 <div style="display:flex;flex-direction: column;flex-grow: 1; justify-content: space-around;margin-top: 2%;">
 <form id="form" action="additem.php"><input  type="submit" value="Add Item"  ></form>
-<form id="form" action=""><input  type="submit" value="Remove Item" ></form>
-<form id="form" action=""><input  type="submit" value="View Items" ></form>
 <form id="form" action="chat.php"><input  type="submit" value="Chat Room" ></form></div>
 </div>
 
