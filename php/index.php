@@ -4,13 +4,90 @@
 <link rel="icon" type="image/png" href="../images/kisaanlogo.png" sizes="96x96">
 <title>Lets Start</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Cutive' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.2/flexslider.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.2/jquery.flexslider.js"></script>
+<style>
+.afterslide{
+	height:500px;
+	width:auto;
+	background:#f2f2f2;
+	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+.slider {
+  background-color:#f2f2f2;
+  height:auto;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+.bigimage {
+  background-color:#f2f2f2;
+  height:auto;box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.afterslide img{
+	border-radius:10px;
+	border-style: solid;
+    margin-left:450px;
+    margin-top:30px;
+}
+.bigimage img{
+	border-radius:10px;
+border-style: solid;}
+.Start p{
+	font-family:alef;
+
+}
+.afterslide p{
+font-family:Cutive;
+font-weight: bold;
+font-size:20px;
+margin-top:20px;
+}
+h2{
+	font-family:Alef;
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-style: solid;
+    border-width: 2px;
+	border-color:white;
+} 
+.start h2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.2s steps(40, end),
+    blink-caret .55s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 70% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+</style>
 <script language="JavaScript">
+
 window.smoothScroll = function(target) {
     var scrollContainer = target;
     do { //find scroll container
@@ -77,9 +154,8 @@ $(document).ready(function (){
 </script>
 </head> 
 <body>
-<div style="background: linear-gradient(rgba(26,26,26,0.2),rgba(26,26,26,0.7)), url('../images/background1.jpg');
-background-size:cover;
-background-attachment: fixed;	">
+<div style="background: linear-gradient(rgba(26,26,26,0.2),rgba(26,26,26,0.7)), url('../images/background1.jpg');background-repeat: no-repeat;
+    background-position: right top;background-repeat: repeat-x;background-size: 1400px 800px;">
  <div class="header" style="height:100px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan</p>
  <div id="google_translate_element" style="margin-left:1170px;"></div>
@@ -99,16 +175,17 @@ function googleTranslateElementInit() {
  </div> 
 <div class="Start">
 
-<h2>WELCOME</h2>
+<h2>WELCOME TO DIGITAL KISAN</h2>
 <p>" We, at DigitalKisaan.com, are excited about making life simpler and grocery shopping a 
 breeze! Now you can buy organic food & grocery online at your leisure and from the comfort 
 of your home - no more standing in the long queues at ration shops, provision stores & supermarkets." 
+
 </p>
 <br>
 <a href="./login.php">
 <input type="submit" value="Buy here"></a>
-</div> 
-<div class="slider">
+</div></div> 
+<div class="slider"><br><br>
 <!-- @zone - hightlighted -->
 <!--Showshow-->
 <div class="container slider-container">
@@ -159,15 +236,27 @@ of your home - no more standing in the long queues at ration shops, provision st
       </div>
    </div>
 </div>
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+	<div class="afterslide">
+	<img align="middle"src="../images/farmer1.jpg" height="300"><br><br><hr></hr><p align="center">
+	 “The ultimate goal of farming is not the growing of crops, but the cultivation and perfection of human beings.”
+	  <br><br>
+ <font size="2px">― Masanobu Fukuoka, The One-Straw Revolution</font>
+	</p>
+	</div>
+
+
+
+<br><br><br><br><br>
 <div class="Contact" id="contact">
-<p style="color:white;">
+<p style="color:white;"><br><br>
 <img src="../images/toll.png" width="0px"><i class="fa fa-phone"></i>&nbsp;Toll Free 1800-274-3131
 <img src="../images/email.png" width="0px"><i class="fa fa-envelope"></i>&nbsp;DigitalKisaan@service.com
 <img src="../images/franchize.png" width="0px"><i class="fa fa-handshake-o"></i>&nbsp;Franchise
-<br></p>
+<br><br><br></p>
 <h4>Copyright © 2017 DigitalKisaan.com. All rights reserved.</h4>
 </div>
 </div>
-</div>
+
 </html>
