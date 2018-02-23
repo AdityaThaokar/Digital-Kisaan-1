@@ -166,13 +166,14 @@ function googleTranslateElementInit() {
 }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- <ul style="margin-left:700px;"> 
+ <ul style="margin-left:600px;"> 
    <li><a href="index.php"><i class="fa fa-home"></i>&nbsp;Home</a></li>
   <li><a href="About.php"><i class="fa fa-info-circle"></i>&nbsp;About</a></li>
    <li><button type="button" onclick="smoothScroll(document.getElementById('contact'))"><i class="fa fa-phone"></i>&nbsp;Contact</button></li>
   <li ><a href="current.php"><i class="fa fa-cloud"></i>&nbsp;Weather</a></li>
   <li ><a href="chat.php"><i class="fa fa-comments"></i>&nbsp;Chat</a></li>
   <li ><a href="videos.php"><i class="fa fa-youtube-play"></i>&nbsp;Farming Tips</a></li>
+  <li ><a href="http://www.agriculturetoday.in"><i class="fa fa-newspaper-o"></i>&nbsp;News</a></li>
  </div> 
 <div class="Start">
 
