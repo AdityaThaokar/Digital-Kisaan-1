@@ -23,8 +23,6 @@ background-size:cover;
 background-attachment: fixed;	">
 <div class="header" style="height:100px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
- <input type="text" placeholder="Search" style="width:400px;height:30px;">
- <input type="submit" value="Search">
  </p>
  <ul style="margin-left:800px;"> 
    <li><a href="logout.php"><i class="fa fa-sign-out"></i>&nbsp;Log out</a></li>

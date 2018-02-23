@@ -17,6 +17,9 @@ if(isset($_SESSION['location'])){
     <script type="text/javascript" src="autocomplete.js"></script>  
 </head>
 <body>
+    <div style="background: linear-gradient(rgba(26,26,26,0.2),rgba(26,26,26,0.7)), url('../images/background7.jpg');
+background-size:cover;
+background-attachment: fixed;   ">
 <div class="jumbotron" style="margin-bottom:0px; background-color:#1eaa83; color:white;">
     <h2 class="text-center" style="font-size:40px; font-weight:600;"><img src="../images/kisaanlogo.png" width="90px" >Get Current Weather Information</h2>
 </div>
@@ -31,7 +34,7 @@ function googleTranslateElementInit() {
 <div class="container" style="height:650px;">
     <div class="row" >
         <div class="col-md-12" style="margin-bottom:10px;">
-            <h3 class="text-center text-primary" style="color:#0a7f5e;">Enter City Name</h3>
+            <h3 class="text-center text-primary" style="color:#fff;">Enter City Name</h3>
             <span id="error" class="text-center"></span>
         </div>
         
@@ -57,5 +60,6 @@ function googleTranslateElementInit() {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
 <script src="weather.js"></script>   
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeMQgP036S3bA1yPmzGABcVN-COuYIHLc&libraries=places&callback=initAutocomplete" async defer></script>
+  </div>
 </body>
 </html>
