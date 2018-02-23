@@ -133,31 +133,6 @@ function googleTranslateElementInit() {
 	 <div class="right" style="overflow-y: scroll;
   overflow-x:hidden;
   height:80%;background:white;border-style:solid;border-width:1px;border-color:#e5e5e5;width: 80%;display: flex-wrap:wrap;padding-bottom: 1%;">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	 	<div id="Items">
 	 		<?php
 	 		$query = "SELECT * FROM items ORDER BY name ASC";
@@ -176,161 +151,13 @@ function googleTranslateElementInit() {
                                <input type="hidden" name="hidden_price" id="price<?php echo $row["id"]; ?>" value="<?php echo $row["sprice"]; ?>" />  
                                <input type="button" name="add_to_cart" id="<?php echo $row["id"]; ?>" style="margin-top:5px;height:auto;" class="btn btn-warning form-control add_to_cart" value="Add to Cart" /> 
                         <!--       <form method="POST">-->
-                                <input type="button" name="mid" id="mid" style="margin-top:5px;height:auto;" class="btn btn-info form-control" value="Quick View" data-toggle="modal" data-target="#myModal"/></input>
+                                <input type="button" name="mid" id="<?php echo $row["id"]; ?>" style="margin-top:5px;height:auto;" class="btn btn-info view_data" value="Quick View"/></input>
                         <!--       </form> -->
 	 			</div>
 	 		</div>
 	 		<?php } ?>
 	 	</div>
 	 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Product Description.</h4>
-        </div>
-
-        <div class="modal-body">
-          <?php 
-                    if(isset($_POST['mid']))
-                    {
-                      $id=$_POST['mid'];
-                      $query1 = "SELECT * FROM items WHERE id = $id;";
-                      $sql = mysqli_query($conn,$query1);
-                     while($row1 = mysqli_fetch_array($sql))
-                      {
-
-          ?>
-           <div class="row">
-
-                    <div class="col-md-6 product_img">
-                        <img src="<?php echo $row1["img"]; ?>" class="img-responsive">
-                    </div>
-                    <div class="col-md-6 product_content">
-                        <h4>Product Type: <span><?php echo $row1["name"]; ?></span></h4>
-                        <div class="rating">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            (10 reviews)
-                        </div>
-                        <p><?php echo $row1["description"]; ?></p>
-                        <h3 class="cost"><span><i class="fa fa-inr"></i></span><?php echo $row1["sprice"]; ?><small class="pre-cost"> per Kg.</small>
-                          <br><br>
-                          <h4>Manufacturing Date : <?php echo $row1["mdate"]; ?></h4>
-                          <h4>Expiry Date : <?php echo $row1["edate"]; ?></h4>
-                          <h6>Owner : <?php echo $row1["owner"]; ?></h6>
-                          <h6>Location : <?php echo $row1["location"]; ?></h6>
-             </div></div> <?php }} ?>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	 	<div id="cart" style="margin-bottom: 2%;overflow-y:scroll;position:relative;width: 100%;height:20%;">  <br><br>
                           <div id="order_table">  
@@ -477,6 +304,39 @@ $('.switch').click(function (event) {
       });  
  });  
  </script>
+</body>
+</html>
 
-</body></html>
+<div id="dataModal" class="modal fade">  
+      <div class="modal-dialog">  
+           <div class="modal-content">  
+                <div class="modal-header">  
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>  
+                     <h4 class="modal-title">Product Details</h4>  
+                </div>  
+                <div class="modal-body" id="item_detail">  
+                </div>  
+                <div class="modal-footer">  
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  
+                </div>  
+           </div>  
+      </div>  
+ </div>  
 
+ <script>  
+ $(document).ready(function(){  
+      $('.view_data').click(function(){ 
+
+        var id= $(this).attr("id");
+        $.ajax({
+          url:"select.php",
+          method:"post",
+          data:{id:id},
+          success:function(data){
+            $('#item_detail').html(data);
+            $('#dataModal').modal("show");
+          }
+        });                 
+      });    
+ });  
+ </script>
