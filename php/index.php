@@ -7,6 +7,7 @@
 <link href='https://fonts.googleapis.com/css?family=Cutive' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -14,6 +15,46 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.2/flexslider.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.2/jquery.flexslider.js"></script>
 <style>
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
 .afterslide{
 	height:500px;
 	width:auto;
@@ -153,7 +194,7 @@ $(document).ready(function (){
 }})
 </script>
 </head> 
-<body>
+<body><a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
 <div style="background: linear-gradient(rgba(26,26,26,0.2),rgba(26,26,26,0.7)), url('../images/background1.jpg');background-repeat: no-repeat;
     background-position: right top;background-repeat: repeat-x;background-size: 1400px 800px;">
  <div class="header" style="height:100px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
@@ -262,3 +303,16 @@ of your home - no more standing in the long queues at ration shops, provision st
 </div>
 
 </html>
+<script>
+  $(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        
+        $('#return-to-top').fadeIn(200);   
+    } else {
+        $('#return-to-top').fadeOut(200);  
+    }
+});
+$('#return-to-top').click(function() {      
+    $('body,html').animate({
+        scrollTop : 0                      
+    }, 500);
+});</script>
