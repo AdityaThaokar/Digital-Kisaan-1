@@ -19,7 +19,7 @@ if(isset($_SESSION['location'])){
 <body>
     <div style="background: linear-gradient(rgba(26,26,26,0.2),rgba(26,26,26,0.7)), url('../images/background7.jpg');
 background-size:cover;
-background-attachment: fixed;   ">
+background-attachment: scroll;   ">
 <div class="jumbotron" style="margin-bottom:0px; background-color:#1eaa83; color:white;">
     <h2 class="text-center" style="font-size:40px; font-weight:600;"><img src="../images/kisaanlogo.png" width="90px" >Get Current Weather Information</h2>
 </div>

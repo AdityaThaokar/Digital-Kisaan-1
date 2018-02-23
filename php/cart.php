@@ -55,7 +55,7 @@ function googleTranslateElementInit() {
                 {  
                      $insert_order = "  
                      INSERT INTO tbl_order(farmerid, creation_date)  
-                     VALUES('1', '".date('Y-m-d')."')  
+                     VALUES('".$_SESSION['id']."', '".date('Y-m-d')."')  
                      ";  
                      $order_id = "";  
                      if(mysqli_query($connect, $insert_order))  
