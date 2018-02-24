@@ -218,7 +218,7 @@ function googleTranslateElementInit() {
  </div> 
 <div class="Start">
 
-<h2>WELCOME TO DIGITAL KISAN</h2>
+<h2>WELCOME TO DIGITAL KISAAN</h2>
 <p>" We, at DigitalKisaan.com, are excited about making life simpler and grocery shopping a 
 breeze! Now you can buy organic food & grocery online at your leisure and from the comfort 
 of your home - no more standing in the long queues at ration shops, provision stores & supermarkets." 

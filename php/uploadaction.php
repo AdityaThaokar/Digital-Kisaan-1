@@ -28,10 +28,10 @@ include('server.php');
 		$sql="INSERT INTO items (`name`,`description`,`sprice`,`quantity`,`mdate`,`edate`,`img`,`currency`,`country`,`location`,`payment`,`contact`,`owner`) values ('$c_name','$desc','$start_price','$quant','$start_date','$end_date','$path','$curr','$count','$add','$pay','$contact','$owner')";
 		$query=mysqli_query($conn, $sql) or die(mysql_error()) ;
 		if($sql){
-     echo ("<SCRIPT LANGUAGE='JavaScript'>
-       window.alert('Added Succesfully ');
-      </SCRIPT>");
-     header('Location: wprofile.php');
+      echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Added Succesfully');
+    window.location.href='wprofile.php';
+    </script>");
 }		
     }
 ?>

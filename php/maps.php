@@ -72,7 +72,7 @@ $connect = mysqli_connect("localhost", "root", "", "digital_kisan");
      <div class="card-block" ><br><center>
           <input type="button" style="font-size:15px;" value="Your Location" onclick="codeAddress()" class="btn btn-success">
           <input type="button" style="font-size:15px;"value="Show nearby shops" onclick="showshop()" class="btn btn-success">
-          <input type="button" style="font-size:15px;"value="Back" class="btn btn-danger" onclick="location='main.php'">
+          <input type="button" style="font-size:15px;"value="Back" class="btn btn-danger" onclick="location='cart.php'">
         </div>
 		<br>
 	 <div class="Contact1" id="contact" style="margin-top: 3%;">

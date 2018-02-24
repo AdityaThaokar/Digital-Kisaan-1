@@ -20,7 +20,7 @@ include('server.php');
 <body>
 <div style="background: linear-gradient(rgba(26,26,26,0.2),rgba(26,26,26,0.7)), url('../images/background7.jpg');
 background-size:cover;
-background-attachment: fixed;	">
+background-attachment: scroll;	">
 <div class="header" style="height:100px;box-shadow: 1px 2px 4px 0px #4e4e4f;">
  <p><img src="../images/kisaanlogo.png" width="40px" >Digital Kisaan
  </p>
